@@ -1,0 +1,79 @@
+{
+  "report": {
+    "rows_original": 105974,
+    "segments": 3,
+    "reset_count": 1,
+    "median_dt": 0.10000000000002274,
+    "gps_changed_fraction": 0.010294978013475004,
+    "alignment": [
+      {
+        "segment": 0,
+        "lag_seconds": -0.2,
+        "lag_samples": -2,
+        "abs_correlation": 0.998,
+        "axis": "y",
+        "accepted": true,
+        "calibration_rows": [
+          0,
+          3000
+        ],
+        "matched_rows": 44226,
+        "unmatched_rows": 0,
+        "clock_residual_p95_s": 0.0070000000050640665
+      },
+      {
+        "segment": 1,
+        "lag_seconds": 0.0,
+        "lag_samples": 0,
+        "abs_correlation": 0.6477,
+        "axis": "y",
+        "accepted": false,
+        "calibration_rows": [
+          44226,
+          46074
+        ],
+        "matched_rows": 9242,
+        "unmatched_rows": 0,
+        "clock_residual_p95_s": 0.03600000000005821
+      },
+      {
+        "segment": 2,
+        "lag_seconds": -0.2,
+        "lag_samples": -2,
+        "abs_correlation": 0.9966,
+        "axis": "y",
+        "accepted": true,
+        "calibration_rows": [
+          53468,
+          56468
+        ],
+        "matched_rows": 52473,
+        "unmatched_rows": 33,
+        "clock_residual_p95_s": 0.030000000006111804
+      }
+    ],
+    "warnings": [
+      "Elapsed clock reset detected; sequence windows are split at resets.",
+      "Repeated GPS fixes: updates are applied only when the fix changes. Fix timestamps are unavailable; stale-fix latency remains a limitation.",
+      "Removed 1 locally consistent duplicate VBOX timestamps.",
+      "Segment 1: motion lag inconclusive; timestamp pairing retained, not row pairing.",
+      "33 samples have no timestamp-matched VBOX reference; excluded from supervised training and scoring.",
+      "Phone speed interpreted as m/s from paired-reference unit diagnostic; verify source metadata."
+    ],
+    "clock_offset_s": 3600.0,
+    "adapter_version": "timestamp-pairing-v2",
+    "pairing": "timestamp nearest neighbour; 150 ms tolerance",
+    "reference_matched_rows": 105941,
+    "reference_unmatched_rows": 33,
+    "speed_unit_diagnostic_median_error": {
+      "m/s": 0.781944444444445,
+      "km/h": 8.132777777777777
+    },
+    "phone_speed_unit": "m/s",
+    "rows_valid": 105974,
+    "reference": "vbox",
+    "source_id": "26a1ee080da4db98e175e15d6fec631e6f8c285c13817d9d74ecc90ed280d103",
+    "sample_hz": 10.0
+  },
+  "fingerprint": "c9fa8fcbbb550ac132bd975ab95d49304cabe403a446affc57dfc26a07e75c48"
+}

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400&family=Overpass:wght@400;600&family=Teko:wght@500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 163 54% 5%;
+    --foreground: 40 43% 93%;
+    --card: 152 40% 12%;
+    --card-foreground: 40 43% 93%;
+    --popover: 152 40% 12%;
+    --popover-foreground: 40 43% 93%;
+    --primary: 40 43% 93%;
+    --primary-foreground: 156 41% 9%;
+    --secondary: 152 35% 10%;
+    --secondary-foreground: 40 43% 93%;
+    --muted: 152 35% 10%;
+    --muted-foreground: 97 13% 67%;
+    --accent: 152 30% 14%;
+    --accent-foreground: 40 43% 93%;
+    --destructive: 0 66% 47%;
+    --destructive-foreground: 40 43% 93%;
+    --border: 155 39% 17%;
+    --input: 155 39% 17%;
+    --ring: 48 100% 45%;
+    --chart-1: 48 100% 45%;
+    --chart-2: 152 30% 30%;
+    --chart-3: 0 66% 47%;
+    --chart-4: 152 20% 45%;
+    --chart-5: 40 30% 55%;
+    --radius: 0.25rem;
+    --font-heading: 'Overpass', sans-serif;
+    --font-body: 'Overpass', sans-serif;
+    --font-display: 'Teko', sans-serif;
+    --font-mono: 'Overpass Mono', monospace;
+    --sidebar-background: 156 41% 9%;
+    --sidebar-foreground: 40 43% 93%;
+    --sidebar-primary: 48 100% 45%;
+    --sidebar-primary-foreground: 156 41% 9%;
+    --sidebar-accent: 152 30% 14%;
+    --sidebar-accent-foreground: 40 43% 93%;
+    --sidebar-border: 155 39% 17%;
+    --sidebar-ring: 48 100% 45%;
+  }
+  .dark {
+    --background: 163 54% 5%;
+    --foreground: 40 43% 93%;
+    --card: 152 40% 12%;
+    --card-foreground: 40 43% 93%;
+    --popover: 152 40% 12%;
+    --popover-foreground: 40 43% 93%;
+    --primary: 40 43% 93%;
+    --primary-foreground: 156 41% 9%;
+    --secondary: 152 35% 10%;
+    --secondary-foreground: 40 43% 93%;
+    --muted: 152 35% 10%;
+    --muted-foreground: 97 13% 67%;
+    --accent: 152 30% 14%;
+    --accent-foreground: 40 43% 93%;
+    --destructive: 0 66% 47%;
+    --destructive-foreground: 40 43% 93%;
+    --border: 155 39% 17%;
+    --input: 155 39% 17%;
+    --ring: 48 100% 45%;
+    --chart-1: 48 100% 45%;
+    --chart-2: 152 30% 30%;
+    --chart-3: 0 66% 47%;
+    --chart-4: 152 20% 45%;
+    --chart-5: 40 30% 55%;
+    --sidebar-background: 156 41% 9%;
+    --sidebar-foreground: 40 43% 93%;
+    --sidebar-primary: 48 100% 45%;
+    --sidebar-primary-foreground: 156 41% 9%;
+    --sidebar-accent: 152 30% 14%;
+    --sidebar-accent-foreground: 40 43% 93%;
+    --sidebar-border: 155 39% 17%;
+    --sidebar-ring: 48 100% 45%;
+  }
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground font-body; }
+}
+
+html, body, #root { min-height: 100%; background: #061410; }
+body { margin: 0; }
+.nexus-grid { background-image: linear-gradient(rgba(27,61,47,0.30) 1px, transparent 1px), linear-gradient(90deg, rgba(27,61,47,0.30) 1px, transparent 1px); background-size: 34px 34px; }
+.hud-label { font-family: 'Overpass Mono', monospace; font-size: 9px; letter-spacing: .12em; color: #5C6E60; text-transform: uppercase; }
+.hud-mono { font-family: 'Overpass Mono', monospace; font-size: 11px; color: #A8B5A0; font-variant-numeric: tabular-nums; }
+/* Guided workspace controls: retain the original palette and type system. */
+@layer components {
+ .primary-action { @apply min-h-[48px] px-5 py-3 bg-route text-ink font-semibold text-sm rounded-xl inline-flex items-center justify-center gap-2; }
+ .secondary-action { @apply min-h-[44px] px-3 py-2 border border-hairline rounded-xl text-sm inline-flex items-center justify-center gap-2; }
+ .field-label { @apply block text-sm text-dust; }
+ .field-label input, .field-label select { @apply block w-full bg-panel text-ivory p-3 rounded-xl mt-2; }
+}
+button:disabled { opacity: .45; cursor: not-allowed; }
+button, input, select, summary { outline-offset: 4px; }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, label:focus-within { outline: 2px solid #E6B800; }
+summary { cursor: pointer; color: #A8B5A0; font-size: 14px; padding: 8px 0; }
+.workflow { display: flex; gap: 8px; }
+.workflow button { flex: 1; padding: 12px 8px; border: 1px solid #1b3d2f; border-radius: 12px; color: #A8B5A0; font-size: 13px; }
+.workflow button.current { border-color: #E6B800; color: #E6B800; }
+.workflow span { margin-right: 8px; opacity: .7; }
+[hidden] { display: none !important; }
+
+@layer components {
+ .result-panel { @apply bg-recess border border-hairline rounded-xl p-4 md:p-5; }
+}
+.results-table { width:100%; border-collapse:collapse; font-size:12px; text-align:left; }
+.results-table th,.results-table td { padding:12px; border-bottom:1px solid #1b3d2f; vertical-align:top; min-width:90px; }
+.results-table th { color:#A8B5A0; font-weight:600; }
+.results-table td { font-variant-numeric:tabular-nums; }
+.route-map { height:420px; border-radius:12px; background:#dce3d5; z-index:0; }
+@media(max-width:600px) { .route-map {height:320px;} }
+.leaflet-control-attribution a { color:#176249; }

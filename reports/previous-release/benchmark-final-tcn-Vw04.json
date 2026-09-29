@@ -1,0 +1,391 @@
+{
+  "model_id": "e95a44ff893b4342",
+  "runs": [
+    {
+      "blackout_start_s": 15.0,
+      "blackout_end_s": 25.0,
+      "blackout_duration_s": 10.0,
+      "blackout_distance_m": 67.1531752325455,
+      "fused_final_drift_m": 101.93361357887026,
+      "fused_drift_pct": 151.79269368258937,
+      "fused_rmse_m": 61.818391792999634,
+      "fused_max_err_m": 103.3992573739373,
+      "start_position_error_m": 6.18286210125424,
+      "start_heading_error_deg": 1.2687080367383612,
+      "online_speed_bias_mps": null,
+      "preblackout_fix_age_s": 5.9,
+      "ins_final_drift_m": 247.8761004812843,
+      "ins_drift_pct": 369.1204468335434,
+      "ins_rmse_m": 137.28912345016823,
+      "ins_max_err_m": 247.8761004812843,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 58.04763431104001,
+      "cross_track_rmse_m": 21.259955662337966,
+      "filter_latency_p95_ms": 0.1676932998861958,
+      "zupt_updates": 0,
+      "rejected_updates": 0,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "forward_projection": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "left_projection": [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        "warnings": [
+          "Too few fresh moving GNSS fixes: default mount axes used. Do not claim mount-independent accuracy."
+        ],
+        "prefix_end_s": 14.9,
+        "initial_course_deg": 235.12,
+        "initial_speed_mps": 3.21,
+        "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+        "boundary_gnss_course_s": null
+      },
+      "full_sih_compliance": false,
+      "quality_mode": "observe",
+      "smoothing": false,
+      "cutoff_hz": 2.0,
+      "heading_rmse_deg": 5.95516665831056,
+      "heading_reference_samples": 85,
+      "quality_flagged_samples": 42,
+      "adapted_samples": 0,
+      "replay_step_p95_ms": 0.3872833998912031,
+      "replay_total_ms": 133.02820999979303
+    },
+    {
+      "blackout_start_s": 12641.5,
+      "blackout_end_s": 12651.5,
+      "blackout_duration_s": 10.0,
+      "blackout_distance_m": 105.97820781370237,
+      "fused_final_drift_m": 61.43102474426292,
+      "fused_drift_pct": 57.96571390625106,
+      "fused_rmse_m": 24.54411774851906,
+      "fused_max_err_m": 61.43102474426292,
+      "start_position_error_m": 4.935953548663947,
+      "start_heading_error_deg": -8.00127245596071,
+      "online_speed_bias_mps": 0.010704917907714773,
+      "preblackout_fix_age_s": 1.6000000000003638,
+      "ins_final_drift_m": 28.297544183879374,
+      "ins_drift_pct": 26.701285828142364,
+      "ins_rmse_m": 10.337748176354008,
+      "ins_max_err_m": 28.297544183879374,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 15.36033294853601,
+      "cross_track_rmse_m": 19.143507718369886,
+      "filter_latency_p95_ms": 0.18042100009552087,
+      "zupt_updates": 0,
+      "rejected_updates": 7,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.5354139228581261,
+          0.0
+        ],
+        "forward_projection": [
+          0.9711519941819409,
+          -0.23846132641675802,
+          0.0
+        ],
+        "left_projection": [
+          0.23846132641675802,
+          0.9711519941819409,
+          0.0
+        ],
+        "warnings": [
+          "Lateral axis lacks turn excitation; using planar fallback.",
+          "Initial course is missing or at low speed; heading may be unreliable until moving GNSS updates are accepted."
+        ],
+        "prefix_end_s": 12641.4,
+        "initial_course_deg": 262.7,
+        "initial_speed_mps": 0.0,
+        "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+        "boundary_gnss_course_s": 12639.9
+      },
+      "full_sih_compliance": false,
+      "quality_mode": "observe",
+      "smoothing": false,
+      "cutoff_hz": 2.0,
+      "heading_rmse_deg": 29.416801501601032,
+      "heading_reference_samples": 101,
+      "quality_flagged_samples": 101,
+      "adapted_samples": 0,
+      "replay_step_p95_ms": 0.38724099999853934,
+      "replay_total_ms": 314.47112699970603
+    },
+    {
+      "blackout_start_s": 15.0,
+      "blackout_end_s": 45.0,
+      "blackout_duration_s": 30.0,
+      "blackout_distance_m": 234.77405974153584,
+      "fused_final_drift_m": 159.5498091923139,
+      "fused_drift_pct": 67.95887474449401,
+      "fused_rmse_m": 98.43685383358371,
+      "fused_max_err_m": 159.67427140217296,
+      "start_position_error_m": 6.18286210125424,
+      "start_heading_error_deg": 1.2687080367383612,
+      "online_speed_bias_mps": null,
+      "preblackout_fix_age_s": 5.9,
+      "ins_final_drift_m": 1103.2294424378374,
+      "ins_drift_pct": 469.9111322828379,
+      "ins_rmse_m": 586.1890326979043,
+      "ins_max_err_m": 1103.2294424378374,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 73.44679221971981,
+      "cross_track_rmse_m": 65.53917077052185,
+      "filter_latency_p95_ms": 0.1832761501646015,
+      "zupt_updates": 0,
+      "rejected_updates": 0,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "forward_projection": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "left_projection": [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        "warnings": [
+          "Too few fresh moving GNSS fixes: default mount axes used. Do not claim mount-independent accuracy."
+        ],
+        "prefix_end_s": 14.9,
+        "initial_course_deg": 235.12,
+        "initial_speed_mps": 3.21,
+        "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+        "boundary_gnss_course_s": null
+      },
+      "full_sih_compliance": false,
+      "quality_mode": "observe",
+      "smoothing": false,
+      "cutoff_hz": 2.0,
+      "heading_rmse_deg": 24.907858033055955,
+      "heading_reference_samples": 242,
+      "quality_flagged_samples": 43,
+      "adapted_samples": 0,
+      "replay_step_p95_ms": 0.36598444999071933,
+      "replay_total_ms": 175.0466690000394
+    },
+    {
+      "blackout_start_s": 12621.5,
+      "blackout_end_s": 12651.5,
+      "blackout_duration_s": 30.0,
+      "blackout_distance_m": 307.8813079913984,
+      "fused_final_drift_m": 394.3744973343775,
+      "fused_drift_pct": 128.09303036525867,
+      "fused_rmse_m": 510.52186215019805,
+      "fused_max_err_m": 597.4619077497357,
+      "start_position_error_m": 443.3867361329977,
+      "start_heading_error_deg": 63.297390162954365,
+      "online_speed_bias_mps": 2.66299091540277,
+      "preblackout_fix_age_s": 8.600000000000364,
+      "ins_final_drift_m": 502.24099846343773,
+      "ins_drift_pct": 163.12812289256266,
+      "ins_rmse_m": 275.0272203124927,
+      "ins_max_err_m": 502.24099846343773,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 201.44566840442832,
+      "cross_track_rmse_m": 469.0972334328982,
+      "filter_latency_p95_ms": 0.14442209990193075,
+      "zupt_updates": 0,
+      "rejected_updates": 4,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.6532459445914792,
+          0.0
+        ],
+        "forward_projection": [
+          0.9694248880037782,
+          -0.2453882363090415,
+          0.0
+        ],
+        "left_projection": [
+          0.2453882363090415,
+          0.9694248880037782,
+          0.0
+        ],
+        "warnings": [
+          "Too few measured turns for lateral-axis calibration.",
+          "Initial course is missing or at low speed; heading may be unreliable until moving GNSS updates are accepted."
+        ],
+        "prefix_end_s": 12621.499,
+        "initial_course_deg": 262.7,
+        "initial_speed_mps": 0.0,
+        "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+        "boundary_gnss_course_s": null
+      },
+      "full_sih_compliance": false,
+      "quality_mode": "observe",
+      "smoothing": false,
+      "cutoff_hz": 2.0,
+      "heading_rmse_deg": 43.024589623084935,
+      "heading_reference_samples": 300,
+      "quality_flagged_samples": 104,
+      "adapted_samples": 0,
+      "replay_step_p95_ms": 0.3191379999179844,
+      "replay_total_ms": 338.43115799982115
+    },
+    {
+      "blackout_start_s": 15.0,
+      "blackout_end_s": 75.0,
+      "blackout_duration_s": 60.0,
+      "blackout_distance_m": 264.5620116195494,
+      "fused_final_drift_m": 112.22367111935937,
+      "fused_drift_pct": 42.41866412806893,
+      "fused_rmse_m": 129.2703149951347,
+      "fused_max_err_m": 160.0559759134449,
+      "start_position_error_m": 6.18286210125424,
+      "start_heading_error_deg": 1.2687080367383612,
+      "online_speed_bias_mps": null,
+      "preblackout_fix_age_s": 5.9,
+      "ins_final_drift_m": 2895.3507635823694,
+      "ins_drift_pct": 1094.3939932487351,
+      "ins_rmse_m": 1488.4525471777504,
+      "ins_max_err_m": 2895.3507635823694,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 75.98748957271751,
+      "cross_track_rmse_m": 104.57875390048159,
+      "filter_latency_p95_ms": 0.1461360501480157,
+      "zupt_updates": 0,
+      "rejected_updates": 1,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "forward_projection": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "left_projection": [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        "warnings": [
+          "Too few fresh moving GNSS fixes: default mount axes used. Do not claim mount-independent accuracy."
+        ],
+        "prefix_end_s": 14.9,
+        "initial_course_deg": 235.12,
+        "initial_speed_mps": 3.21,
+        "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+        "boundary_gnss_course_s": null
+      },
+      "full_sih_compliance": false,
+      "quality_mode": "observe",
+      "smoothing": false,
+      "cutoff_hz": 2.0,
+      "heading_rmse_deg": 58.69606761556797,
+      "heading_reference_samples": 290,
+      "quality_flagged_samples": 74,
+      "adapted_samples": 0,
+      "replay_step_p95_ms": 0.3486240002075646,
+      "replay_total_ms": 236.2965699999222
+    },
+    {
+      "blackout_start_s": 12591.5,
+      "blackout_end_s": 12651.5,
+      "blackout_duration_s": 60.0,
+      "blackout_distance_m": 701.0494510137896,
+      "fused_final_drift_m": 994.8913130258759,
+      "fused_drift_pct": 141.9145698762278,
+      "fused_rmse_m": 670.0270888948289,
+      "fused_max_err_m": 1009.6622627333012,
+      "start_position_error_m": 89.03479006550614,
+      "start_heading_error_deg": -152.39295977555594,
+      "online_speed_bias_mps": -0.4518483281135559,
+      "preblackout_fix_age_s": 5.600000000000364,
+      "ins_final_drift_m": 1501.8165438398798,
+      "ins_drift_pct": 214.22405247848044,
+      "ins_rmse_m": 881.6468951332092,
+      "ins_max_err_m": 1501.8165438398798,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 417.3088566666275,
+      "cross_track_rmse_m": 524.2037943400173,
+      "filter_latency_p95_ms": 0.16982500005724432,
+      "zupt_updates": 0,
+      "rejected_updates": 4,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "forward_projection": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "left_projection": [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        "warnings": [
+          "Too few fresh moving GNSS fixes: default mount axes used. Do not claim mount-independent accuracy."
+        ],
+        "prefix_end_s": 12591.4,
+        "initial_course_deg": 271.82,
+        "initial_speed_mps": 7.52,
+        "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+        "boundary_gnss_course_s": null
+      },
+      "full_sih_compliance": false,
+      "quality_mode": "observe",
+      "smoothing": false,
+      "cutoff_hz": 2.0,
+      "heading_rmse_deg": 129.53938085989952,
+      "heading_reference_samples": 601,
+      "quality_flagged_samples": 115,
+      "adapted_samples": 0,
+      "replay_step_p95_ms": 0.37831100030416565,
+      "replay_total_ms": 455.0279469999623
+    }
+  ],
+  "skipped": [],
+  "eligible_runs": 6,
+  "pass_rate": 0.0,
+  "median_drift_pct": 98.02595255487634,
+  "p95_drift_pct": 149.32316273099897,
+  "claim": "Exploratory recorded-data evaluation; not official SIH certification."
+}

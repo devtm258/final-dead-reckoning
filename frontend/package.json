@@ -1,0 +1,26 @@
+{
+  "name": "tesseracts-idr-ui",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host 127.0.0.1",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:ui": "vite build --ssr src/App.jsx --outDir test-dist && node check-ui.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "10.4.21",
+    "jsdom": "^30.1.1",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.17",
+    "tailwindcss-animate": "1.0.7",
+    "vite": "^8.3.0"
+  }
+}

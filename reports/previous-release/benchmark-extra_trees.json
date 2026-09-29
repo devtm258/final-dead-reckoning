@@ -1,0 +1,275 @@
+{
+  "model_id": "2c4ca75ea7284972",
+  "runs": [
+    {
+      "blackout_start_s": 9025.023,
+      "blackout_end_s": 9035.023,
+      "blackout_duration_s": 10.0,
+      "blackout_distance_m": 79.88732445287067,
+      "fused_final_drift_m": 11.628195436013474,
+      "fused_drift_pct": 14.555745252018673,
+      "fused_rmse_m": 4.296012960404226,
+      "fused_max_err_m": 11.628195436013474,
+      "ins_final_drift_m": 9.36521999705309,
+      "ins_drift_pct": 11.723036240346339,
+      "ins_rmse_m": 5.949624375329597,
+      "ins_max_err_m": 9.36521999705309,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 3.3559619004560926,
+      "cross_track_rmse_m": 2.6820229452128492,
+      "filter_latency_p95_ms": 0.23643425020054554,
+      "zupt_updates": 0,
+      "rejected_updates": 1,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.8073201948835076,
+          0.0
+        ],
+        "forward_projection": [
+          0.9827935753786171,
+          -0.18470730411793257,
+          0.0
+        ],
+        "left_projection": [
+          0.18470730411793257,
+          0.9827935753786171,
+          0.0
+        ],
+        "warnings": [],
+        "prefix_end_s": 9024.923
+      },
+      "full_sih_compliance": false
+    },
+    {
+      "blackout_start_s": 10588.623,
+      "blackout_end_s": 10598.623,
+      "blackout_duration_s": 10.0,
+      "blackout_distance_m": 0.30984265999738225,
+      "fused_final_drift_m": 157.44373377383062,
+      "fused_drift_pct": null,
+      "fused_rmse_m": 156.7419727061484,
+      "fused_max_err_m": 157.44373377383062,
+      "ins_final_drift_m": 1247.5775263171688,
+      "ins_drift_pct": null,
+      "ins_rmse_m": 1209.398645987612,
+      "ins_max_err_m": 1247.5775263171688,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": false,
+      "reference_coverage": 0.7821782178217822,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 76.34233983116744,
+      "cross_track_rmse_m": 136.89372942877085,
+      "filter_latency_p95_ms": 0.2155800002583419,
+      "zupt_updates": 0,
+      "rejected_updates": 4,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.9978846832736921,
+          0.0
+        ],
+        "forward_projection": [
+          -0.045787722107578,
+          0.9989511922532548,
+          0.0
+        ],
+        "left_projection": [
+          -0.9989511922532548,
+          -0.045787722107578,
+          0.0
+        ],
+        "warnings": [],
+        "prefix_end_s": 10588.523
+      },
+      "full_sih_compliance": false
+    },
+    {
+      "blackout_start_s": 9025.023,
+      "blackout_end_s": 9055.023,
+      "blackout_duration_s": 30.0,
+      "blackout_distance_m": 351.5479619827473,
+      "fused_final_drift_m": 77.82263868392896,
+      "fused_drift_pct": 22.137132653253214,
+      "fused_rmse_m": 51.25954273527623,
+      "fused_max_err_m": 78.30740639433839,
+      "ins_final_drift_m": 73.06488325044494,
+      "ins_drift_pct": 20.783759586702054,
+      "ins_rmse_m": 27.913415856742336,
+      "ins_max_err_m": 73.06488325044494,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 40.320643164923936,
+      "cross_track_rmse_m": 31.65101035032663,
+      "filter_latency_p95_ms": 0.19864650057570543,
+      "zupt_updates": 0,
+      "rejected_updates": 0,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.8073201948835076,
+          0.0
+        ],
+        "forward_projection": [
+          0.9827935753786171,
+          -0.18470730411793257,
+          0.0
+        ],
+        "left_projection": [
+          0.18470730411793257,
+          0.9827935753786171,
+          0.0
+        ],
+        "warnings": [],
+        "prefix_end_s": 9024.923
+      },
+      "full_sih_compliance": false
+    },
+    {
+      "blackout_start_s": 10568.623,
+      "blackout_end_s": 10598.623,
+      "blackout_duration_s": 30.0,
+      "blackout_distance_m": 3.819101683418314,
+      "fused_final_drift_m": 7.920805717280609,
+      "fused_drift_pct": null,
+      "fused_rmse_m": 7.479783197806072,
+      "fused_max_err_m": 8.284630809792754,
+      "ins_final_drift_m": 39.33807031267528,
+      "ins_drift_pct": null,
+      "ins_rmse_m": 32.02504464733705,
+      "ins_max_err_m": 40.0063828150855,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": false,
+      "reference_coverage": 0.9269102990033222,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 1.6093133917497497,
+      "cross_track_rmse_m": 7.304605882134707,
+      "filter_latency_p95_ms": 0.22421800031224848,
+      "zupt_updates": 0,
+      "rejected_updates": 0,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.995888809271438,
+          0.0
+        ],
+        "forward_projection": [
+          0.7999902676849858,
+          0.6000129762007692,
+          0.0
+        ],
+        "left_projection": [
+          -0.6000129762007692,
+          0.7999902676849858,
+          0.0
+        ],
+        "warnings": [],
+        "prefix_end_s": 10568.523
+      },
+      "full_sih_compliance": false
+    },
+    {
+      "blackout_start_s": 9025.023,
+      "blackout_end_s": 9085.023,
+      "blackout_duration_s": 60.0,
+      "blackout_distance_m": 888.1849341076393,
+      "fused_final_drift_m": 77.70959471720839,
+      "fused_drift_pct": 8.749258373233198,
+      "fused_rmse_m": 54.03413890313075,
+      "fused_max_err_m": 79.13134478483653,
+      "ins_final_drift_m": 402.3446679844112,
+      "ins_drift_pct": 45.299650166735546,
+      "ins_rmse_m": 170.67522809785902,
+      "ins_max_err_m": 402.3446679844112,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": true,
+      "benchmark_eligible": true,
+      "reference_coverage": 1.0,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 38.64088628821353,
+      "cross_track_rmse_m": 37.769962587540114,
+      "filter_latency_p95_ms": 0.21640405052494313,
+      "zupt_updates": 0,
+      "rejected_updates": 0,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.8073201948835076,
+          0.0
+        ],
+        "forward_projection": [
+          0.9827935753786171,
+          -0.18470730411793257,
+          0.0
+        ],
+        "left_projection": [
+          0.18470730411793257,
+          0.9827935753786171,
+          0.0
+        ],
+        "warnings": [],
+        "prefix_end_s": 9024.923
+      },
+      "full_sih_compliance": false
+    },
+    {
+      "blackout_start_s": 10538.623,
+      "blackout_end_s": 10598.623,
+      "blackout_duration_s": 60.0,
+      "blackout_distance_m": 87.48898160170201,
+      "fused_final_drift_m": 41.76114373556429,
+      "fused_drift_pct": 47.73303217276434,
+      "fused_rmse_m": 37.89318470191426,
+      "fused_max_err_m": 46.01184429643443,
+      "ins_final_drift_m": 299.9040857859919,
+      "ins_drift_pct": 342.79069237692164,
+      "ins_rmse_m": 196.51853485814866,
+      "ins_max_err_m": 299.9040857859919,
+      "target_drift_pct": 10.0,
+      "meets_isro_target": false,
+      "benchmark_eligible": true,
+      "reference_coverage": 0.9633943427620633,
+      "evaluation_mode": "test",
+      "along_track_rmse_m": 36.5372600276303,
+      "cross_track_rmse_m": 10.045998035372985,
+      "filter_latency_p95_ms": 0.23542450071545318,
+      "zupt_updates": 0,
+      "rejected_updates": 0,
+      "heading_calibration": {
+        "gyro_projection": [
+          0.0,
+          0.984001365115648,
+          0.0
+        ],
+        "forward_projection": [
+          0.4317576343289464,
+          -0.901989659141762,
+          0.0
+        ],
+        "left_projection": [
+          0.901989659141762,
+          0.4317576343289464,
+          0.0
+        ],
+        "warnings": [],
+        "prefix_end_s": 10538.523
+      },
+      "full_sih_compliance": false
+    }
+  ],
+  "skipped": [],
+  "eligible_runs": 4,
+  "pass_rate": 0.25,
+  "median_drift_pct": 18.346438952635943,
+  "p95_drift_pct": 43.89364724483766,
+  "claim": "Exploratory recorded-data evaluation; not official SIH certification."
+}

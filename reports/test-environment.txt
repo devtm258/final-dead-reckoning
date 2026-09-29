@@ -1,0 +1,12 @@
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+joblib==1.5.3
+fastapi==0.141.1
+uvicorn==0.54.0
+python-multipart==0.0.32
+threadpoolctl==3.6.0
+torch==2.14.0+cpu
+pytest==9.1.1
+httpx==0.28.1

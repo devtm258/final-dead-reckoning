@@ -1,0 +1,62 @@
+{
+  "report": {
+    "rows_original": 93876,
+    "segments": 2,
+    "reset_count": 1,
+    "median_dt": 0.10000000000002274,
+    "gps_changed_fraction": 0.010023861263794794,
+    "alignment": [
+      {
+        "segment": 0,
+        "lag_seconds": 0.2,
+        "lag_samples": 2,
+        "abs_correlation": 0.9985,
+        "axis": "y",
+        "accepted": true,
+        "calibration_rows": [
+          0,
+          372
+        ],
+        "matched_rows": 1864,
+        "unmatched_rows": 0,
+        "clock_residual_p95_s": 0.04200000000128057
+      },
+      {
+        "segment": 1,
+        "lag_seconds": 0.2,
+        "lag_samples": 2,
+        "abs_correlation": 0.8175,
+        "axis": "y",
+        "accepted": true,
+        "calibration_rows": [
+          1864,
+          4864
+        ],
+        "matched_rows": 91925,
+        "unmatched_rows": 87,
+        "clock_residual_p95_s": 0.04899999999906868
+      }
+    ],
+    "warnings": [
+      "Elapsed clock reset detected; sequence windows are split at resets.",
+      "Repeated GPS fixes: updates are applied only when the fix changes. Fix timestamps are unavailable; stale-fix latency remains a limitation.",
+      "87 samples have no timestamp-matched VBOX reference; excluded from supervised training and scoring.",
+      "Phone speed interpreted as m/s from paired-reference unit diagnostic; verify source metadata."
+    ],
+    "clock_offset_s": 3600.0,
+    "adapter_version": "timestamp-pairing-v2",
+    "pairing": "timestamp nearest neighbour; 150 ms tolerance",
+    "reference_matched_rows": 93789,
+    "reference_unmatched_rows": 87,
+    "speed_unit_diagnostic_median_error": {
+      "m/s": 1.091111111111113,
+      "km/h": 6.791805555555555
+    },
+    "phone_speed_unit": "m/s",
+    "rows_valid": 93876,
+    "reference": "vbox",
+    "source_id": "8f48d68ef4ab225c8381af6fb8ec0f36fe6f6048977eeebecc74cfec50d13cb8",
+    "sample_hz": 10.0
+  },
+  "fingerprint": "606daa3ee2b594858861dbd5c2be24fe6952fc3355b324b0b8d7b09aaf81a74a"
+}

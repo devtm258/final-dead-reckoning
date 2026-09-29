@@ -1,0 +1,1 @@
+Frontend interactions passed: load data, attach model, explicit blackout payload, replay charts, trace toggles.

@@ -1,0 +1,1612 @@
+[
+  {
+    "blackout_start_s": 1321.5225000000003,
+    "blackout_end_s": 1331.5225000000003,
+    "blackout_duration_s": 10.0,
+    "blackout_distance_m": 109.59011377843929,
+    "fused_final_drift_m": 6.388053666156834,
+    "fused_drift_pct": 5.829041914375325,
+    "fused_rmse_m": 3.9699488009736723,
+    "fused_max_err_m": 6.388053666156834,
+    "start_position_error_m": 1.970571215171073,
+    "start_heading_error_deg": 1.83740913185241,
+    "online_speed_bias_mps": 1.4922865581512448,
+    "preblackout_fix_age_s": 3.8975000000002638,
+    "ins_final_drift_m": 89.9839641454221,
+    "ins_drift_pct": 82.10956357554718,
+    "ins_rmse_m": 53.52456120235734,
+    "ins_max_err_m": 89.9839641454221,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 1.9732298736369493,
+    "cross_track_rmse_m": 3.444830525314563,
+    "filter_latency_p95_ms": 0.16294505014684543,
+    "zupt_updates": 0,
+    "rejected_updates": 1,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        0.904788586271279,
+        0.0
+      ],
+      "forward_projection": [
+        -0.20421856167205468,
+        -0.9789253184327175,
+        0.0
+      ],
+      "left_projection": [
+        0.9789253184327175,
+        -0.20421856167205468,
+        0.0
+      ],
+      "warnings": [
+        "Lateral axis lacks turn excitation; using planar fallback.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 1321.423,
+      "initial_course_deg": 349.5,
+      "initial_speed_mps": 3.09,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.012593078035690921,
+          1.044430674511758,
+          0.0843298559490928,
+          0.0026847941919512894
+        ],
+        "accel": [
+          -0.24129839844305995,
+          -0.43986467039612404,
+          0.13634310410371206,
+          0.019152221870710036
+        ],
+        "gyro_rmse": 0.03625249731450004,
+        "accel_rmse": 2.293096229184894,
+        "intervals": 41,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 1321.423
+      },
+      "vehicle_fix_age_s": 3.8975000000002638
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.273612392538797,
+    "heading_reference_samples": 100,
+    "quality_flagged_samples": 69,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.30815610003855903,
+    "replay_total_ms": 272.4777840001025,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 4014.3205000000007,
+    "blackout_end_s": 4024.3205000000007,
+    "blackout_duration_s": 10.0,
+    "blackout_distance_m": 174.1842446662262,
+    "fused_final_drift_m": 46.995349641883095,
+    "fused_drift_pct": 26.980252853486327,
+    "fused_rmse_m": 35.99407638891517,
+    "fused_max_err_m": 46.995349641883095,
+    "start_position_error_m": 25.794885814298883,
+    "start_heading_error_deg": 1.7247677430555755,
+    "online_speed_bias_mps": 4.07051752090454,
+    "preblackout_fix_age_s": 5.691500000000815,
+    "ins_final_drift_m": 76.71726288785192,
+    "ins_drift_pct": 44.04374404519674,
+    "ins_rmse_m": 69.20816510635014,
+    "ins_max_err_m": 76.71726288785192,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 27.026582311387894,
+    "cross_track_rmse_m": 23.77261835929806,
+    "filter_latency_p95_ms": 0.16976604997580577,
+    "zupt_updates": 0,
+    "rejected_updates": 5,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0020624286612012,
+        0.0
+      ],
+      "forward_projection": [
+        0.4225466031532714,
+        -0.9063411985359773,
+        0.0
+      ],
+      "left_projection": [
+        0.9043928088808052,
+        0.4216382416755611,
+        -0.06553503186409924
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 4014.23,
+      "initial_course_deg": 158.84,
+      "initial_speed_mps": 13.63,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.061148167224926116,
+          1.001951026488679,
+          -0.043194392760851935,
+          0.00027045163146129
+        ],
+        "accel": [
+          0.34420790632996595,
+          0.6155288546259563,
+          -0.07919039378483259,
+          0.01395057216157636
+        ],
+        "gyro_rmse": 0.05139220305360589,
+        "accel_rmse": 3.8643234743854378,
+        "intervals": 57,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 4014.23
+      },
+      "vehicle_fix_age_s": 5.691500000000815
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 1.5655997911030959,
+    "heading_reference_samples": 100,
+    "quality_flagged_samples": 58,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.308958599964626,
+    "replay_total_ms": 280.87872400010383,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 6707.1185000000005,
+    "blackout_end_s": 6717.1185000000005,
+    "blackout_duration_s": 10.0,
+    "blackout_distance_m": 95.28510320735073,
+    "fused_final_drift_m": 32.17287733518629,
+    "fused_drift_pct": 33.764855420447645,
+    "fused_rmse_m": 24.3518230719024,
+    "fused_max_err_m": 32.17287733518629,
+    "start_position_error_m": 11.950407214117542,
+    "start_heading_error_deg": -5.492391673427523,
+    "online_speed_bias_mps": -3.0955694198608397,
+    "preblackout_fix_age_s": 6.501500000000306,
+    "ins_final_drift_m": 134.5199528658032,
+    "ins_drift_pct": 141.17626820750056,
+    "ins_rmse_m": 92.82964091020052,
+    "ins_max_err_m": 134.5199528658032,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 23.011518618038025,
+    "cross_track_rmse_m": 7.967515159504091,
+    "filter_latency_p95_ms": 0.15941499992777608,
+    "zupt_updates": 0,
+    "rejected_updates": 0,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0309622900958775,
+        0.0
+      ],
+      "forward_projection": [
+        0.4029308872489227,
+        -0.9152304082037463,
+        0.0
+      ],
+      "left_projection": [
+        0.9152304082037463,
+        0.4029308872489227,
+        0.0
+      ],
+      "warnings": [
+        "Too few measured turns for lateral-axis calibration.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 6707.117,
+      "initial_course_deg": 268.45,
+      "initial_speed_mps": 3.28,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.1901892957915344,
+          1.0382150491951403,
+          -0.120820774158047,
+          -0.001954293909281836
+        ],
+        "accel": [
+          -0.3206003162714592,
+          -0.44966982805532446,
+          -0.967682375549351,
+          0.09936007867097128
+        ],
+        "gyro_rmse": 0.07900218497620697,
+        "accel_rmse": 2.475968389013511,
+        "intervals": 53,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 6707.117
+      },
+      "vehicle_fix_age_s": 6.501500000000306
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 5.176569688475303,
+    "heading_reference_samples": 100,
+    "quality_flagged_samples": 102,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.2972431999410218,
+    "replay_total_ms": 264.23273000000336,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 1337.5225000000003,
+    "blackout_end_s": 1367.5225000000003,
+    "blackout_duration_s": 30.0,
+    "blackout_distance_m": 346.9488213379243,
+    "fused_final_drift_m": 26.281145508060167,
+    "fused_drift_pct": 7.574934368335157,
+    "fused_rmse_m": 11.178444383365829,
+    "fused_max_err_m": 26.281145508060167,
+    "start_position_error_m": 1.881145578916172,
+    "start_heading_error_deg": 0.6775218214331075,
+    "online_speed_bias_mps": 1.4922865581512448,
+    "preblackout_fix_age_s": 1.89850000000024,
+    "ins_final_drift_m": 70.8168870844776,
+    "ins_drift_pct": 20.411335254401322,
+    "ins_rmse_m": 27.247139629084458,
+    "ins_max_err_m": 70.8168870844776,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 11.014929248151464,
+    "cross_track_rmse_m": 1.9049809684667323,
+    "filter_latency_p95_ms": 0.1876385500963806,
+    "zupt_updates": 0,
+    "rejected_updates": 0,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        0.8095901286613904,
+        0.0
+      ],
+      "forward_projection": [
+        -0.9836188545335953,
+        0.18026078055422323,
+        0.0
+      ],
+      "left_projection": [
+        0.16849792502885486,
+        0.919433142908838,
+        -0.3553183712978355
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 1337.424,
+      "initial_course_deg": 17.58,
+      "initial_speed_mps": 12.57,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": 1335.624,
+      "vehicle_transfer": {
+        "gyro": [
+          0.014278909368380234,
+          1.0467267976237469,
+          0.07069712490013189,
+          0.002528598660177563
+        ],
+        "accel": [
+          -0.2188910323515967,
+          -0.4303866757793755,
+          0.13483860369884024,
+          0.028601698667894925
+        ],
+        "gyro_rmse": 0.03682733017682446,
+        "accel_rmse": 2.359629794807929,
+        "intervals": 43,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 1337.424
+      },
+      "vehicle_fix_age_s": 1.89850000000024
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 1.9191653307520264,
+    "heading_reference_samples": 300,
+    "quality_flagged_samples": 82,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.33319560005793386,
+    "replay_total_ms": 340.4153840001527,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 4014.3205000000007,
+    "blackout_end_s": 4044.3205000000007,
+    "blackout_duration_s": 30.0,
+    "blackout_distance_m": 559.9023488356656,
+    "fused_final_drift_m": 52.422285953944936,
+    "fused_drift_pct": 9.362755141670457,
+    "fused_rmse_m": 51.426526938681285,
+    "fused_max_err_m": 64.5911988291875,
+    "start_position_error_m": 25.794885814298883,
+    "start_heading_error_deg": 1.7247677430555755,
+    "online_speed_bias_mps": 4.07051752090454,
+    "preblackout_fix_age_s": 5.691500000000815,
+    "ins_final_drift_m": 133.7432549898462,
+    "ins_drift_pct": 23.88688943133914,
+    "ins_rmse_m": 81.97753250434211,
+    "ins_max_err_m": 133.7432549898462,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 41.42471400374947,
+    "cross_track_rmse_m": 30.474263611816347,
+    "filter_latency_p95_ms": 0.1891880998300621,
+    "zupt_updates": 0,
+    "rejected_updates": 5,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0020624286612012,
+        0.0
+      ],
+      "forward_projection": [
+        0.4225466031532714,
+        -0.9063411985359773,
+        0.0
+      ],
+      "left_projection": [
+        0.9043928088808052,
+        0.4216382416755611,
+        -0.06553503186409924
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 4014.23,
+      "initial_course_deg": 158.84,
+      "initial_speed_mps": 13.63,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.061148167224926116,
+          1.001951026488679,
+          -0.043194392760851935,
+          0.00027045163146129
+        ],
+        "accel": [
+          0.34420790632996595,
+          0.6155288546259563,
+          -0.07919039378483259,
+          0.01395057216157636
+        ],
+        "gyro_rmse": 0.05139220305360589,
+        "accel_rmse": 3.8643234743854378,
+        "intervals": 57,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 4014.23
+      },
+      "vehicle_fix_age_s": 5.691500000000815
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.503713131764741,
+    "heading_reference_samples": 300,
+    "quality_flagged_samples": 72,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3390709500763478,
+    "replay_total_ms": 367.9571360000864,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 6691.1185000000005,
+    "blackout_end_s": 6721.1185000000005,
+    "blackout_duration_s": 30.0,
+    "blackout_distance_m": 240.09252608277546,
+    "fused_final_drift_m": 45.77239443777346,
+    "fused_drift_pct": 19.064481175058628,
+    "fused_rmse_m": 35.60534243429371,
+    "fused_max_err_m": 52.16965683328008,
+    "start_position_error_m": 11.52678344637594,
+    "start_heading_error_deg": -3.0208040725618246,
+    "online_speed_bias_mps": -3.0955694198608397,
+    "preblackout_fix_age_s": 8.501500000000306,
+    "ins_final_drift_m": 471.67337900491,
+    "ins_drift_pct": 196.45483626687053,
+    "ins_rmse_m": 244.90370850479022,
+    "ins_max_err_m": 471.67337900491,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 28.208045506320662,
+    "cross_track_rmse_m": 21.72663293234041,
+    "filter_latency_p95_ms": 0.16799895009853572,
+    "zupt_updates": 0,
+    "rejected_updates": 4,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0253890581296023,
+        0.0
+      ],
+      "forward_projection": [
+        -0.729791766235035,
+        -0.6836694946650377,
+        0.0
+      ],
+      "left_projection": [
+        0.6836694946650377,
+        -0.729791766235035,
+        0.0
+      ],
+      "warnings": [
+        "Too few measured turns for lateral-axis calibration.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 6691.118,
+      "initial_course_deg": 80.44,
+      "initial_speed_mps": 8.03,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.19643596558705334,
+          1.0381542136611108,
+          -0.12613728345454112,
+          -0.001842762495321234
+        ],
+        "accel": [
+          -0.35522586761877956,
+          -0.45977715211074516,
+          -0.9675055101733001,
+          0.09990114582941886
+        ],
+        "gyro_rmse": 0.07965629792515642,
+        "accel_rmse": 2.496284779521772,
+        "intervals": 52,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 6691.118
+      },
+      "vehicle_fix_age_s": 8.501500000000306
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.6696482388444625,
+    "heading_reference_samples": 300,
+    "quality_flagged_samples": 122,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.30261349999136655,
+    "replay_total_ms": 323.80209699999796,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 1361.5225000000003,
+    "blackout_end_s": 1421.5225000000003,
+    "blackout_duration_s": 60.0,
+    "blackout_distance_m": 240.04506954872323,
+    "fused_final_drift_m": 51.35325750764743,
+    "fused_drift_pct": 21.393173208760278,
+    "fused_rmse_m": 37.59645053675291,
+    "fused_max_err_m": 54.032294033930036,
+    "start_position_error_m": 7.3417644844807874,
+    "start_heading_error_deg": -1.174164557138863,
+    "online_speed_bias_mps": 0.7541425037384033,
+    "preblackout_fix_age_s": 7.8995000000002165,
+    "ins_final_drift_m": 419.89318894809117,
+    "ins_drift_pct": 174.92264670858538,
+    "ins_rmse_m": 248.2810450534828,
+    "ins_max_err_m": 419.89318894809117,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 35.2649315379918,
+    "cross_track_rmse_m": 13.03371384461312,
+    "filter_latency_p95_ms": 0.19351799990090512,
+    "zupt_updates": 0,
+    "rejected_updates": 2,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        0.772074372318823,
+        0.0
+      ],
+      "forward_projection": [
+        -0.9841825759829511,
+        0.17715715376908336,
+        0.0
+      ],
+      "left_projection": [
+        0.1586023893763798,
+        0.881103047845067,
+        -0.4455364195688573
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 1361.424,
+      "initial_course_deg": 23.81,
+      "initial_speed_mps": 13.98,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.051367006953969674,
+          1.0459675395429455,
+          0.04339864743562492,
+          0.0024546226346039593
+        ],
+        "accel": [
+          -0.17088545271471436,
+          -0.39654621147105434,
+          0.16308562713218674,
+          0.016956965786143488
+        ],
+        "gyro_rmse": 0.036928931713483285,
+        "accel_rmse": 2.3640544220313844,
+        "intervals": 44,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 1361.424
+      },
+      "vehicle_fix_age_s": 7.8995000000002165
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 4.934293869735307,
+    "heading_reference_samples": 271,
+    "quality_flagged_samples": 90,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.33465499985823044,
+    "replay_total_ms": 435.4433640000934,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 4014.3205000000007,
+    "blackout_end_s": 4074.3205000000007,
+    "blackout_duration_s": 60.0,
+    "blackout_distance_m": 1125.2797573578514,
+    "fused_final_drift_m": 70.67733097577248,
+    "fused_drift_pct": 6.2808675365957285,
+    "fused_rmse_m": 57.189201174628444,
+    "fused_max_err_m": 86.24097329588876,
+    "start_position_error_m": 25.794885814298883,
+    "start_heading_error_deg": 1.7247677430555755,
+    "online_speed_bias_mps": 4.07051752090454,
+    "preblackout_fix_age_s": 5.691500000000815,
+    "ins_final_drift_m": 364.974333123706,
+    "ins_drift_pct": 32.43409745330024,
+    "ins_rmse_m": 187.4596414483576,
+    "ins_max_err_m": 364.974333123706,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 49.56553730365957,
+    "cross_track_rmse_m": 28.528270939397206,
+    "filter_latency_p95_ms": 0.17793604995404164,
+    "zupt_updates": 0,
+    "rejected_updates": 5,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0020624286612012,
+        0.0
+      ],
+      "forward_projection": [
+        0.4225466031532714,
+        -0.9063411985359773,
+        0.0
+      ],
+      "left_projection": [
+        0.9043928088808052,
+        0.4216382416755611,
+        -0.06553503186409924
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 4014.23,
+      "initial_course_deg": 158.84,
+      "initial_speed_mps": 13.63,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.061148167224926116,
+          1.001951026488679,
+          -0.043194392760851935,
+          0.00027045163146129
+        ],
+        "accel": [
+          0.34420790632996595,
+          0.6155288546259563,
+          -0.07919039378483259,
+          0.01395057216157636
+        ],
+        "gyro_rmse": 0.05139220305360589,
+        "accel_rmse": 3.8643234743854378,
+        "intervals": 57,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 4014.23
+      },
+      "vehicle_fix_age_s": 5.691500000000815
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 6.199128709243351,
+    "heading_reference_samples": 575,
+    "quality_flagged_samples": 95,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3237211501641467,
+    "replay_total_ms": 424.9727090000306,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 6667.1185000000005,
+    "blackout_end_s": 6727.1185000000005,
+    "blackout_duration_s": 60.0,
+    "blackout_distance_m": 433.4342293929735,
+    "fused_final_drift_m": 31.723320584167865,
+    "fused_drift_pct": 7.3190621397383655,
+    "fused_rmse_m": 15.11948038944566,
+    "fused_max_err_m": 31.723320584167865,
+    "start_position_error_m": 12.336666557579784,
+    "start_heading_error_deg": -0.8378172500108522,
+    "online_speed_bias_mps": -2.1966951942443846,
+    "preblackout_fix_age_s": 2.5015000000003056,
+    "ins_final_drift_m": 211.4343478974968,
+    "ins_drift_pct": 48.78118375505587,
+    "ins_rmse_m": 182.50516854655947,
+    "ins_max_err_m": 253.1996787494841,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 12.212126669102418,
+    "cross_track_rmse_m": 8.914182489977946,
+    "filter_latency_p95_ms": 0.18984954989491595,
+    "zupt_updates": 0,
+    "rejected_updates": 6,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0558249259588557,
+        0.0
+      ],
+      "forward_projection": [
+        -0.7890939209804697,
+        -0.614272564804638,
+        0.0
+      ],
+      "left_projection": [
+        0.614272564804638,
+        -0.7890939209804697,
+        0.0
+      ],
+      "warnings": [
+        "Too few measured turns for lateral-axis calibration.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 6667.118,
+      "initial_course_deg": 352.66,
+      "initial_speed_mps": 5.86,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.1954573876644079,
+          1.0372152954625524,
+          -0.12218998301967367,
+          -0.0018048056241095668
+        ],
+        "accel": [
+          -0.3693233278648582,
+          -0.37607194754756346,
+          -1.1108711668254572,
+          0.10247144529532783
+        ],
+        "gyro_rmse": 0.08106765533264958,
+        "accel_rmse": 2.4881231770594296,
+        "intervals": 50,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 6667.118
+      },
+      "vehicle_fix_age_s": 2.5015000000003056
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.1332100446355415,
+    "heading_reference_samples": 600,
+    "quality_flagged_samples": 160,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3459275500176772,
+    "replay_total_ms": 424.4055510000635,
+    "model_id": "e95a44ff893b4342",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 1321.5225000000003,
+    "blackout_end_s": 1331.5225000000003,
+    "blackout_duration_s": 10.0,
+    "blackout_distance_m": 109.59011377843929,
+    "fused_final_drift_m": 17.974986336267932,
+    "fused_drift_pct": 16.402014485182807,
+    "fused_rmse_m": 16.100173230002543,
+    "fused_max_err_m": 18.72995902621958,
+    "start_position_error_m": 7.043523765915942,
+    "start_heading_error_deg": 1.83740913185241,
+    "online_speed_bias_mps": 0.08727756500244155,
+    "preblackout_fix_age_s": 3.8975000000002638,
+    "ins_final_drift_m": 89.9839641454221,
+    "ins_drift_pct": 82.10956357554718,
+    "ins_rmse_m": 53.52456120235734,
+    "ins_max_err_m": 89.9839641454221,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 15.418658486986054,
+    "cross_track_rmse_m": 4.63471126369092,
+    "filter_latency_p95_ms": 0.1861950500028797,
+    "zupt_updates": 0,
+    "rejected_updates": 0,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        0.904788586271279,
+        0.0
+      ],
+      "forward_projection": [
+        -0.20421856167205468,
+        -0.9789253184327175,
+        0.0
+      ],
+      "left_projection": [
+        0.9789253184327175,
+        -0.20421856167205468,
+        0.0
+      ],
+      "warnings": [
+        "Lateral axis lacks turn excitation; using planar fallback.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 1321.423,
+      "initial_course_deg": 349.5,
+      "initial_speed_mps": 3.09,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.012593078035690921,
+          1.044430674511758,
+          0.0843298559490928,
+          0.0026847941919512894
+        ],
+        "accel": [
+          -0.24129839844305995,
+          -0.43986467039612404,
+          0.13634310410371206,
+          0.019152221870710036
+        ],
+        "gyro_rmse": 0.03625249731450004,
+        "accel_rmse": 2.293096229184894,
+        "intervals": 41,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 1321.423
+      },
+      "vehicle_fix_age_s": 3.8975000000002638
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.273612392538797,
+    "heading_reference_samples": 100,
+    "quality_flagged_samples": 69,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3532641500214594,
+    "replay_total_ms": 268.71438600005604,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 4014.3205000000007,
+    "blackout_end_s": 4024.3205000000007,
+    "blackout_duration_s": 10.0,
+    "blackout_distance_m": 174.1842446662262,
+    "fused_final_drift_m": 21.827559332854374,
+    "fused_drift_pct": 12.531305213442577,
+    "fused_rmse_m": 24.25145640250634,
+    "fused_max_err_m": 26.316537887362543,
+    "start_position_error_m": 25.727090876002904,
+    "start_heading_error_deg": 1.7247677430555755,
+    "online_speed_bias_mps": 5.495777339935303,
+    "preblackout_fix_age_s": 5.691500000000815,
+    "ins_final_drift_m": 76.71726288785192,
+    "ins_drift_pct": 44.04374404519674,
+    "ins_rmse_m": 69.20816510635014,
+    "ins_max_err_m": 76.71726288785192,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 7.995860243262776,
+    "cross_track_rmse_m": 22.89540033746681,
+    "filter_latency_p95_ms": 0.1748536000604872,
+    "zupt_updates": 0,
+    "rejected_updates": 10,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0020624286612012,
+        0.0
+      ],
+      "forward_projection": [
+        0.4225466031532714,
+        -0.9063411985359773,
+        0.0
+      ],
+      "left_projection": [
+        0.9043928088808052,
+        0.4216382416755611,
+        -0.06553503186409924
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 4014.23,
+      "initial_course_deg": 158.84,
+      "initial_speed_mps": 13.63,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.061148167224926116,
+          1.001951026488679,
+          -0.043194392760851935,
+          0.00027045163146129
+        ],
+        "accel": [
+          0.34420790632996595,
+          0.6155288546259563,
+          -0.07919039378483259,
+          0.01395057216157636
+        ],
+        "gyro_rmse": 0.05139220305360589,
+        "accel_rmse": 3.8643234743854378,
+        "intervals": 57,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 4014.23
+      },
+      "vehicle_fix_age_s": 5.691500000000815
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 1.5655997911030959,
+    "heading_reference_samples": 100,
+    "quality_flagged_samples": 58,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.31739805000370325,
+    "replay_total_ms": 264.0279869999631,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 6707.1185000000005,
+    "blackout_end_s": 6717.1185000000005,
+    "blackout_duration_s": 10.0,
+    "blackout_distance_m": 95.28510320735073,
+    "fused_final_drift_m": 41.499748359651484,
+    "fused_drift_pct": 43.553238609967735,
+    "fused_rmse_m": 31.072641422198558,
+    "fused_max_err_m": 41.499748359651484,
+    "start_position_error_m": 15.46609914017566,
+    "start_heading_error_deg": -5.492391673427523,
+    "online_speed_bias_mps": -5.187012481689453,
+    "preblackout_fix_age_s": 6.501500000000306,
+    "ins_final_drift_m": 134.5199528658032,
+    "ins_drift_pct": 141.17626820750056,
+    "ins_rmse_m": 92.82964091020052,
+    "ins_max_err_m": 134.5199528658032,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 30.181852678737975,
+    "cross_track_rmse_m": 7.386799972348418,
+    "filter_latency_p95_ms": 0.18396450000182085,
+    "zupt_updates": 0,
+    "rejected_updates": 9,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0309622900958775,
+        0.0
+      ],
+      "forward_projection": [
+        0.4029308872489227,
+        -0.9152304082037463,
+        0.0
+      ],
+      "left_projection": [
+        0.9152304082037463,
+        0.4029308872489227,
+        0.0
+      ],
+      "warnings": [
+        "Too few measured turns for lateral-axis calibration.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 6707.117,
+      "initial_course_deg": 268.45,
+      "initial_speed_mps": 3.28,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.1901892957915344,
+          1.0382150491951403,
+          -0.120820774158047,
+          -0.001954293909281836
+        ],
+        "accel": [
+          -0.3206003162714592,
+          -0.44966982805532446,
+          -0.967682375549351,
+          0.09936007867097128
+        ],
+        "gyro_rmse": 0.07900218497620697,
+        "accel_rmse": 2.475968389013511,
+        "intervals": 53,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 6707.117
+      },
+      "vehicle_fix_age_s": 6.501500000000306
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 5.176569688475303,
+    "heading_reference_samples": 100,
+    "quality_flagged_samples": 102,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.353083199854609,
+    "replay_total_ms": 274.4641640001646,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 1337.5225000000003,
+    "blackout_end_s": 1367.5225000000003,
+    "blackout_duration_s": 30.0,
+    "blackout_distance_m": 346.9488213379243,
+    "fused_final_drift_m": 7.716496131707773,
+    "fused_drift_pct": 2.2241021318219127,
+    "fused_rmse_m": 8.456069072983802,
+    "fused_max_err_m": 13.52063958689809,
+    "start_position_error_m": 1.9127577845969572,
+    "start_heading_error_deg": 0.6775218214331075,
+    "online_speed_bias_mps": -0.2784956741333007,
+    "preblackout_fix_age_s": 1.89850000000024,
+    "ins_final_drift_m": 70.8168870844776,
+    "ins_drift_pct": 20.411335254401322,
+    "ins_rmse_m": 27.247139629084458,
+    "ins_max_err_m": 70.8168870844776,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 8.176106636469813,
+    "cross_track_rmse_m": 2.1578657131868573,
+    "filter_latency_p95_ms": 0.17086405001691668,
+    "zupt_updates": 0,
+    "rejected_updates": 0,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        0.8095901286613904,
+        0.0
+      ],
+      "forward_projection": [
+        -0.9836188545335953,
+        0.18026078055422323,
+        0.0
+      ],
+      "left_projection": [
+        0.16849792502885486,
+        0.919433142908838,
+        -0.3553183712978355
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 1337.424,
+      "initial_course_deg": 17.58,
+      "initial_speed_mps": 12.57,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": 1335.624,
+      "vehicle_transfer": {
+        "gyro": [
+          0.014278909368380234,
+          1.0467267976237469,
+          0.07069712490013189,
+          0.002528598660177563
+        ],
+        "accel": [
+          -0.2188910323515967,
+          -0.4303866757793755,
+          0.13483860369884024,
+          0.028601698667894925
+        ],
+        "gyro_rmse": 0.03682733017682446,
+        "accel_rmse": 2.359629794807929,
+        "intervals": 43,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 1337.424
+      },
+      "vehicle_fix_age_s": 1.89850000000024
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 1.9191653307520264,
+    "heading_reference_samples": 300,
+    "quality_flagged_samples": 82,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.31557200004499464,
+    "replay_total_ms": 313.27642000019296,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 4014.3205000000007,
+    "blackout_end_s": 4044.3205000000007,
+    "blackout_duration_s": 30.0,
+    "blackout_distance_m": 559.9023488356656,
+    "fused_final_drift_m": 49.87832786517586,
+    "fused_drift_pct": 8.908397682006406,
+    "fused_rmse_m": 28.704525000778915,
+    "fused_max_err_m": 49.87832786517586,
+    "start_position_error_m": 25.727090876002904,
+    "start_heading_error_deg": 1.7247677430555755,
+    "online_speed_bias_mps": 5.495777339935303,
+    "preblackout_fix_age_s": 5.691500000000815,
+    "ins_final_drift_m": 133.7432549898462,
+    "ins_drift_pct": 23.88688943133914,
+    "ins_rmse_m": 81.97753250434211,
+    "ins_max_err_m": 133.7432549898462,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 21.96586029761753,
+    "cross_track_rmse_m": 18.478385668285302,
+    "filter_latency_p95_ms": 0.17371660006801898,
+    "zupt_updates": 0,
+    "rejected_updates": 10,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0020624286612012,
+        0.0
+      ],
+      "forward_projection": [
+        0.4225466031532714,
+        -0.9063411985359773,
+        0.0
+      ],
+      "left_projection": [
+        0.9043928088808052,
+        0.4216382416755611,
+        -0.06553503186409924
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 4014.23,
+      "initial_course_deg": 158.84,
+      "initial_speed_mps": 13.63,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.061148167224926116,
+          1.001951026488679,
+          -0.043194392760851935,
+          0.00027045163146129
+        ],
+        "accel": [
+          0.34420790632996595,
+          0.6155288546259563,
+          -0.07919039378483259,
+          0.01395057216157636
+        ],
+        "gyro_rmse": 0.05139220305360589,
+        "accel_rmse": 3.8643234743854378,
+        "intervals": 57,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 4014.23
+      },
+      "vehicle_fix_age_s": 5.691500000000815
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.503713131764741,
+    "heading_reference_samples": 300,
+    "quality_flagged_samples": 72,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3237680499978523,
+    "replay_total_ms": 322.92516699999396,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 6691.1185000000005,
+    "blackout_end_s": 6721.1185000000005,
+    "blackout_duration_s": 30.0,
+    "blackout_distance_m": 240.09252608277546,
+    "fused_final_drift_m": 52.603593300645,
+    "fused_drift_pct": 21.909717124017902,
+    "fused_rmse_m": 36.78491300607861,
+    "fused_max_err_m": 56.98016907822222,
+    "start_position_error_m": 10.41789293570868,
+    "start_heading_error_deg": -3.0208040725618246,
+    "online_speed_bias_mps": -5.187012481689453,
+    "preblackout_fix_age_s": 8.501500000000306,
+    "ins_final_drift_m": 471.67337900491,
+    "ins_drift_pct": 196.45483626687053,
+    "ins_rmse_m": 244.90370850479022,
+    "ins_max_err_m": 471.67337900491,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 30.132832340802942,
+    "cross_track_rmse_m": 21.098394251360272,
+    "filter_latency_p95_ms": 0.19208500003742301,
+    "zupt_updates": 0,
+    "rejected_updates": 2,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0253890581296023,
+        0.0
+      ],
+      "forward_projection": [
+        -0.729791766235035,
+        -0.6836694946650377,
+        0.0
+      ],
+      "left_projection": [
+        0.6836694946650377,
+        -0.729791766235035,
+        0.0
+      ],
+      "warnings": [
+        "Too few measured turns for lateral-axis calibration.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 6691.118,
+      "initial_course_deg": 80.44,
+      "initial_speed_mps": 8.03,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.19643596558705334,
+          1.0381542136611108,
+          -0.12613728345454112,
+          -0.001842762495321234
+        ],
+        "accel": [
+          -0.35522586761877956,
+          -0.45977715211074516,
+          -0.9675055101733001,
+          0.09990114582941886
+        ],
+        "gyro_rmse": 0.07965629792515642,
+        "accel_rmse": 2.496284779521772,
+        "intervals": 52,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 6691.118
+      },
+      "vehicle_fix_age_s": 8.501500000000306
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.6696482388444625,
+    "heading_reference_samples": 300,
+    "quality_flagged_samples": 122,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.34373569998251685,
+    "replay_total_ms": 332.14352800018787,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 1361.5225000000003,
+    "blackout_end_s": 1421.5225000000003,
+    "blackout_duration_s": 60.0,
+    "blackout_distance_m": 240.04506954872323,
+    "fused_final_drift_m": 32.488064563493225,
+    "fused_drift_pct": 13.5341519926111,
+    "fused_rmse_m": 22.660924493785398,
+    "fused_max_err_m": 32.791713672893,
+    "start_position_error_m": 5.427934221325797,
+    "start_heading_error_deg": -1.174164557138863,
+    "online_speed_bias_mps": -0.608437004089355,
+    "preblackout_fix_age_s": 7.8995000000002165,
+    "ins_final_drift_m": 419.89318894809117,
+    "ins_drift_pct": 174.92264670858538,
+    "ins_rmse_m": 248.2810450534828,
+    "ins_max_err_m": 419.89318894809117,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 19.93463330161965,
+    "cross_track_rmse_m": 10.776265310533134,
+    "filter_latency_p95_ms": 0.18894204997650374,
+    "zupt_updates": 0,
+    "rejected_updates": 4,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        0.772074372318823,
+        0.0
+      ],
+      "forward_projection": [
+        -0.9841825759829511,
+        0.17715715376908336,
+        0.0
+      ],
+      "left_projection": [
+        0.1586023893763798,
+        0.881103047845067,
+        -0.4455364195688573
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 1361.424,
+      "initial_course_deg": 23.81,
+      "initial_speed_mps": 13.98,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.051367006953969674,
+          1.0459675395429455,
+          0.04339864743562492,
+          0.0024546226346039593
+        ],
+        "accel": [
+          -0.17088545271471436,
+          -0.39654621147105434,
+          0.16308562713218674,
+          0.016956965786143488
+        ],
+        "gyro_rmse": 0.036928931713483285,
+        "accel_rmse": 2.3640544220313844,
+        "intervals": 44,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 1361.424
+      },
+      "vehicle_fix_age_s": 7.8995000000002165
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 4.934293869735307,
+    "heading_reference_samples": 271,
+    "quality_flagged_samples": 90,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.34337749992801037,
+    "replay_total_ms": 411.8269069999769,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 4014.3205000000007,
+    "blackout_end_s": 4074.3205000000007,
+    "blackout_duration_s": 60.0,
+    "blackout_distance_m": 1125.2797573578514,
+    "fused_final_drift_m": 128.3734272635813,
+    "fused_drift_pct": 11.408134414947726,
+    "fused_rmse_m": 66.18307105062595,
+    "fused_max_err_m": 128.3734272635813,
+    "start_position_error_m": 25.727090876002904,
+    "start_heading_error_deg": 1.7247677430555755,
+    "online_speed_bias_mps": 5.495777339935303,
+    "preblackout_fix_age_s": 5.691500000000815,
+    "ins_final_drift_m": 364.974333123706,
+    "ins_drift_pct": 32.43409745330024,
+    "ins_rmse_m": 187.4596414483576,
+    "ins_max_err_m": 364.974333123706,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 25.26820910803629,
+    "cross_track_rmse_m": 61.169571701661894,
+    "filter_latency_p95_ms": 0.19465649997982837,
+    "zupt_updates": 0,
+    "rejected_updates": 9,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0020624286612012,
+        0.0
+      ],
+      "forward_projection": [
+        0.4225466031532714,
+        -0.9063411985359773,
+        0.0
+      ],
+      "left_projection": [
+        0.9043928088808052,
+        0.4216382416755611,
+        -0.06553503186409924
+      ],
+      "warnings": [
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 4014.23,
+      "initial_course_deg": 158.84,
+      "initial_speed_mps": 13.63,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          -0.061148167224926116,
+          1.001951026488679,
+          -0.043194392760851935,
+          0.00027045163146129
+        ],
+        "accel": [
+          0.34420790632996595,
+          0.6155288546259563,
+          -0.07919039378483259,
+          0.01395057216157636
+        ],
+        "gyro_rmse": 0.05139220305360589,
+        "accel_rmse": 3.8643234743854378,
+        "intervals": 57,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 4014.23
+      },
+      "vehicle_fix_age_s": 5.691500000000815
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 6.199128709243351,
+    "heading_reference_samples": 575,
+    "quality_flagged_samples": 95,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3294205498605151,
+    "replay_total_ms": 405.30113199997686,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  },
+  {
+    "blackout_start_s": 6667.1185000000005,
+    "blackout_end_s": 6727.1185000000005,
+    "blackout_duration_s": 60.0,
+    "blackout_distance_m": 433.4342293929735,
+    "fused_final_drift_m": 62.53391836983762,
+    "fused_drift_pct": 14.427544972028775,
+    "fused_rmse_m": 26.241884826303185,
+    "fused_max_err_m": 62.53391836983762,
+    "start_position_error_m": 12.476589524162291,
+    "start_heading_error_deg": -0.8378172500108522,
+    "online_speed_bias_mps": -4.595947647094727,
+    "preblackout_fix_age_s": 2.5015000000003056,
+    "ins_final_drift_m": 211.4343478974968,
+    "ins_drift_pct": 48.78118375505587,
+    "ins_rmse_m": 182.50516854655947,
+    "ins_max_err_m": 253.1996787494841,
+    "target_drift_pct": 10.0,
+    "meets_isro_target": false,
+    "benchmark_eligible": false,
+    "reference_coverage": 1.0,
+    "evaluation_mode": "exploration",
+    "along_track_rmse_m": 20.170548548083588,
+    "cross_track_rmse_m": 16.786467481467454,
+    "filter_latency_p95_ms": 0.19777299991119435,
+    "zupt_updates": 0,
+    "rejected_updates": 2,
+    "heading_calibration": {
+      "gyro_projection": [
+        0.0,
+        1.0558249259588557,
+        0.0
+      ],
+      "forward_projection": [
+        -0.7890939209804697,
+        -0.614272564804638,
+        0.0
+      ],
+      "left_projection": [
+        0.614272564804638,
+        -0.7890939209804697,
+        0.0
+      ],
+      "warnings": [
+        "Too few measured turns for lateral-axis calibration.",
+        "High phone/acceleration calibration residual; speed changes may be inaccurate."
+      ],
+      "prefix_end_s": 6667.118,
+      "initial_course_deg": 352.66,
+      "initial_speed_mps": 5.86,
+      "heading_convention": "GNSS clockwise from North; filter yaw counterclockwise from East, radians.",
+      "boundary_gnss_course_s": null,
+      "vehicle_transfer": {
+        "gyro": [
+          0.1954573876644079,
+          1.0372152954625524,
+          -0.12218998301967367,
+          -0.0018048056241095668
+        ],
+        "accel": [
+          -0.3693233278648582,
+          -0.37607194754756346,
+          -1.1108711668254572,
+          0.10247144529532783
+        ],
+        "gyro_rmse": 0.08106765533264958,
+        "accel_rmse": 2.4881231770594296,
+        "intervals": 50,
+        "warnings": [
+          "High phone/acceleration calibration residual; speed changes may be inaccurate."
+        ],
+        "prefix_end_s": 6667.118
+      },
+      "vehicle_fix_age_s": 2.5015000000003056
+    },
+    "full_sih_compliance": false,
+    "estimator": "vehicle",
+    "meets_requested_50pct": false,
+    "quality_mode": "observe",
+    "smoothing": false,
+    "cutoff_hz": 2.0,
+    "heading_rmse_deg": 3.1332100446355415,
+    "heading_reference_samples": 600,
+    "quality_flagged_samples": 160,
+    "adapted_samples": 0,
+    "replay_step_p95_ms": 0.3473184500194293,
+    "replay_total_ms": 405.79624599990893,
+    "model_id": "9089d396f2164f11",
+    "scorable": true
+  }
+]

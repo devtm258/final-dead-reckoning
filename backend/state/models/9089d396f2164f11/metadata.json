@@ -1,0 +1,392 @@
+{
+  "model_id": "9089d396f2164f11",
+  "family_id": "52f3f5eb426647b1",
+  "family_name": "Categorized cnn_gru 35",
+  "version": 1,
+  "parent_id": null,
+  "kind": "cnn_gru",
+  "window": 35,
+  "sample_hz": 10.0,
+  "channels": [
+    "lax",
+    "lay",
+    "laz",
+    "wx",
+    "wy",
+    "wz"
+  ],
+  "feature_names": [
+    "lax_mean",
+    "lay_mean",
+    "laz_mean",
+    "wx_mean",
+    "wy_mean",
+    "wz_mean",
+    "acc_norm_mean",
+    "gyro_norm_mean",
+    "lax_std",
+    "lay_std",
+    "laz_std",
+    "wx_std",
+    "wy_std",
+    "wz_std",
+    "acc_norm_std",
+    "gyro_norm_std",
+    "lax_min",
+    "lay_min",
+    "laz_min",
+    "wx_min",
+    "wy_min",
+    "wz_min",
+    "acc_norm_min",
+    "gyro_norm_min",
+    "lax_max",
+    "lay_max",
+    "laz_max",
+    "wx_max",
+    "wy_max",
+    "wz_max",
+    "acc_norm_max",
+    "gyro_norm_max",
+    "lax_rms",
+    "lay_rms",
+    "laz_rms",
+    "wx_rms",
+    "wy_rms",
+    "wz_rms",
+    "acc_norm_rms",
+    "gyro_norm_rms",
+    "lax_change",
+    "lay_change",
+    "laz_change",
+    "wx_change",
+    "wy_change",
+    "wz_change",
+    "acc_norm_change",
+    "gyro_norm_change"
+  ],
+  "created_unix": 1790391464.2284954,
+  "split_method": "explicit acquisition groups",
+  "variance_scale": 17.180009841918945,
+  "dataset_splits": {
+    "2eee4b8f6996d3d179864a33d78eee00562d4cbae92dc9aeaeaa400a654310c4": {
+      "train": [
+        0.0,
+        9773.105
+      ]
+    },
+    "33e740b8e015a3865d57d105ca96f8bb2e224ed1e8370579933f6544d8399e50": {
+      "train": [
+        0.0,
+        3718.199
+      ]
+    },
+    "606daa3ee2b594858861dbd5c2be24fe6952fc3355b324b0b8d7b09aaf81a74a": {
+      "train": [
+        0.0,
+        9388.608
+      ]
+    },
+    "6e44e4d8c4049be4d550ac3fea4ecedf96c751a506f4d6534acdacc6626c5bcd": {
+      "train": [
+        0.0,
+        5174.499
+      ]
+    },
+    "8fa91df26a7787b2a61d31992da19c26ba7cd739fa4ef9aa93fcf2e57c0dbb41": {
+      "validation": [
+        0.0,
+        7391.318
+      ]
+    },
+    "b09371810b302808bbb80fa9d6d3bcc061084da1674755eeacea66852c5ba6d7": {
+      "train": [
+        0.0,
+        2462.0
+      ]
+    },
+    "b82c60b0547756df69575f08793237b6e9ca308ebee10f15031e5051266fd0da": {
+      "test": [
+        0.0,
+        12652.5
+      ]
+    },
+    "c9fa8fcbbb550ac132bd975ab95d49304cabe403a446affc57dfc26a07e75c48": {
+      "train": [
+        0.0,
+        10599.623
+      ]
+    }
+  },
+  "source_splits": {
+    "a2bb1e1eb28d111f84963240c54b790f32366f6c5b09dff1713770b52d3f5616": {
+      "train": [
+        0.0,
+        9773.105
+      ]
+    },
+    "b87fa6978d7d50087ca63bfee5230692013485aaccef5474dbc847a9c1498739": {
+      "train": [
+        0.0,
+        3718.199
+      ]
+    },
+    "8f48d68ef4ab225c8381af6fb8ec0f36fe6f6048977eeebecc74cfec50d13cb8": {
+      "train": [
+        0.0,
+        9388.608
+      ]
+    },
+    "e79a2eea18143b825438f9a11c7d724a97c9e18329776defd4d9291d03d4aaca": {
+      "train": [
+        0.0,
+        5174.499
+      ]
+    },
+    "cf17b89f6eec6872de2412f8a17a82ab9821a881c20cbcadc23d867d9e1dde84": {
+      "validation": [
+        0.0,
+        7391.318
+      ]
+    },
+    "b9e45dc8d856271f0a69030b7dd98f32c6b6b88b627138d67e8d3a1b7c5329fe": {
+      "train": [
+        0.0,
+        2462.0
+      ]
+    },
+    "0d79ef3cd96f48b611e5da7dd14f4cb6ed0f1f747d247d26847918545440b9d3": {
+      "test": [
+        0.0,
+        12652.5
+      ]
+    },
+    "26a1ee080da4db98e175e15d6fec631e6f8c285c13817d9d74ecc90ed280d103": {
+      "train": [
+        0.0,
+        10599.623
+      ]
+    }
+  },
+  "n_train": 30000,
+  "n_val": 10000,
+  "test": null,
+  "training_config": {
+    "family_id": "52f3f5eb426647b1",
+    "family_name": "Categorized cnn_gru 35",
+    "kind": "cnn_gru",
+    "window": 35,
+    "epochs": 20,
+    "max_windows": 30000,
+    "n_estimators": 60,
+    "parent_id": null,
+    "mode": "create",
+    "replay": true,
+    "replayed": [],
+    "entries": [
+      {
+        "session_id": "2eee4b8f6996d3d1",
+        "role": "train",
+        "source": "a2bb1e1eb28d111f84963240c54b790f32366f6c5b09dff1713770b52d3f5616",
+        "acquisition": "Driver A",
+        "name": "S4",
+        "fingerprint": "2eee4b8f6996d3d179864a33d78eee00562d4cbae92dc9aeaeaa400a654310c4",
+        "sha256": "1241d7b1d57876cbdcb3c0e969e84cfacbb29a11c861bfb24398aed3dc74beac",
+        "windows_available": 91348,
+        "time_range": [
+          0.0,
+          9773.105
+        ]
+      },
+      {
+        "session_id": "33e740b8e015a386",
+        "role": "train",
+        "source": "b87fa6978d7d50087ca63bfee5230692013485aaccef5474dbc847a9c1498739",
+        "acquisition": "Driver A",
+        "name": "S3c",
+        "fingerprint": "33e740b8e015a3865d57d105ca96f8bb2e224ed1e8370579933f6544d8399e50",
+        "sha256": "90f82b60c2d9022e56ebb8a9494f54d76e24edaf81d510d3bf8541d5a3c8301a",
+        "windows_available": 37143,
+        "time_range": [
+          0.0,
+          3718.199
+        ]
+      },
+      {
+        "session_id": "606daa3ee2b59485",
+        "role": "train",
+        "source": "8f48d68ef4ab225c8381af6fb8ec0f36fe6f6048977eeebecc74cfec50d13cb8",
+        "acquisition": "Driver A",
+        "name": "S2",
+        "fingerprint": "606daa3ee2b594858861dbd5c2be24fe6952fc3355b324b0b8d7b09aaf81a74a",
+        "sha256": "410b27326890be819e300e68af2dc37eb5dfdcd073b003838ef297940860a4b8",
+        "windows_available": 93721,
+        "time_range": [
+          0.0,
+          9388.608
+        ]
+      },
+      {
+        "session_id": "6e44e4d8c4049be4",
+        "role": "train",
+        "source": "e79a2eea18143b825438f9a11c7d724a97c9e18329776defd4d9291d03d4aaca",
+        "acquisition": "S (Driver A)",
+        "name": "S (Driver A)/S1",
+        "fingerprint": "6e44e4d8c4049be4d550ac3fea4ecedf96c751a506f4d6534acdacc6626c5bcd",
+        "sha256": "3678bb3cc9aaa899d8e644c8c59970ecaca6c687c6aa315369d846ca6356d53d",
+        "windows_available": 51709,
+        "time_range": [
+          0.0,
+          5174.499
+        ]
+      },
+      {
+        "session_id": "8fa91df26a7787b2",
+        "role": "validation",
+        "source": "cf17b89f6eec6872de2412f8a17a82ab9821a881c20cbcadc23d867d9e1dde84",
+        "acquisition": "Y (Driver D)",
+        "name": "Y (Driver D)/Y1",
+        "fingerprint": "8fa91df26a7787b2a61d31992da19c26ba7cd739fa4ef9aa93fcf2e57c0dbb41",
+        "sha256": "45f96482523fe7051e1cbcea71fac9d2376ce6716aa3dfb8036140a3bbae4895",
+        "windows_available": 68768,
+        "time_range": [
+          0.0,
+          7391.318
+        ]
+      },
+      {
+        "session_id": "b09371810b302808",
+        "role": "train",
+        "source": "b9e45dc8d856271f0a69030b7dd98f32c6b6b88b627138d67e8d3a1b7c5329fe",
+        "acquisition": "Driver A",
+        "name": "S3a",
+        "fingerprint": "b09371810b302808bbb80fa9d6d3bcc061084da1674755eeacea66852c5ba6d7",
+        "sha256": "d86d0260f3b72c777fc3033e96e637d35693f2be3e74429500fdb7e19326ef42",
+        "windows_available": 24519,
+        "time_range": [
+          0.0,
+          2462.0
+        ]
+      },
+      {
+        "session_id": "b82c60b0547756df",
+        "role": "test",
+        "source": "0d79ef3cd96f48b611e5da7dd14f4cb6ed0f1f747d247d26847918545440b9d3",
+        "acquisition": "Driver E",
+        "name": "Vw04 (Driver E)",
+        "fingerprint": "b82c60b0547756df69575f08793237b6e9ca308ebee10f15031e5051266fd0da",
+        "sha256": "7738e969457a54c52805cc49dc502e6a4cfbd9a5244b8365f15d5a32962b3025",
+        "windows_available": 126489,
+        "time_range": [
+          0.0,
+          12652.5
+        ]
+      },
+      {
+        "session_id": "c9fa8fcbbb550ac1",
+        "role": "train",
+        "source": "26a1ee080da4db98e175e15d6fec631e6f8c285c13817d9d74ecc90ed280d103",
+        "acquisition": "M (Driver B)",
+        "name": "M (Driver B)",
+        "fingerprint": "c9fa8fcbbb550ac132bd975ab95d49304cabe403a446affc57dfc26a07e75c48",
+        "sha256": "038055b900f6bc8174958a970b2753181743428759928ef0f4ae1bf767012902",
+        "windows_available": 105839,
+        "time_range": [
+          0.0,
+          10599.623
+        ]
+      }
+    ],
+    "seed": 42,
+    "session_id": null
+  },
+  "feature_importance": [],
+  "normalization_mean": [
+    -0.03310270607471466,
+    -0.0018902587471529841,
+    0.04197079315781593,
+    0.0016139773651957512,
+    -0.010397564619779587,
+    0.0005244553904049098
+  ],
+  "normalization_std": [
+    1.0654746294021606,
+    1.070763111114502,
+    0.5476498603820801,
+    0.05704436078667641,
+    0.14044322073459625,
+    0.09891542047262192
+  ],
+  "parameters": 6090,
+  "best_epoch": 2,
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 6.416663658872563,
+      "validation_mae": 4.253547191619873,
+      "optimizer_updates": 235
+    },
+    {
+      "epoch": 2,
+      "loss": 3.670189005263308,
+      "validation_mae": 2.6236965656280518,
+      "optimizer_updates": 470
+    },
+    {
+      "epoch": 3,
+      "loss": 2.6581447996991745,
+      "validation_mae": 2.8395490646362305,
+      "optimizer_updates": 705
+    },
+    {
+      "epoch": 4,
+      "loss": 2.5949689616548253,
+      "validation_mae": 2.7176015377044678,
+      "optimizer_updates": 940
+    },
+    {
+      "epoch": 5,
+      "loss": 2.4805994368614033,
+      "validation_mae": 2.8025872707366943,
+      "optimizer_updates": 1175
+    },
+    {
+      "epoch": 6,
+      "loss": 2.4236143533219683,
+      "validation_mae": 2.7295079231262207,
+      "optimizer_updates": 1410
+    },
+    {
+      "epoch": 7,
+      "loss": 2.3598115677529194,
+      "validation_mae": 2.812826156616211,
+      "optimizer_updates": 1645
+    }
+  ],
+  "baseline_validation": {
+    "mae": 8.458175659179688,
+    "rmse": 9.929556112673243,
+    "r2": -2.597202777862549,
+    "bias": -8.433187484741211,
+    "p95_abs_error": 17.443965911865234,
+    "n": 10000
+  },
+  "optimizer_updates": 1645,
+  "initial_weights_sha256": "fbe6036587f135a002a0fb26a0b839b2152072f6a036f1bb96881a10c8df8887",
+  "weights_sha256": "3a8491ed5ea77fd511fa5250f21138e8ecdb1749d40d39a8cdbff97e20554cec",
+  "weights_changed": true,
+  "latest_weights_changed": true,
+  "epochs_completed": 7,
+  "training_status": "complete",
+  "validation": {
+    "mae": 2.6236965656280518,
+    "rmse": 3.504437766699381,
+    "r2": 0.5519341230392456,
+    "bias": 0.8040098547935486,
+    "p95_abs_error": 7.221548557281494,
+    "n": 10000,
+    "coverage_1sigma": 0.7061,
+    "coverage_2sigma": 0.9391
+  },
+  "window_latency_ms": 1.4744502499979717
+}

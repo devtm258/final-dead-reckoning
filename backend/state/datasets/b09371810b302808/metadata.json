@@ -1,0 +1,46 @@
+{
+  "report": {
+    "rows_original": 24621,
+    "segments": 1,
+    "reset_count": 0,
+    "median_dt": 0.09999999999999432,
+    "gps_changed_fraction": 0.010316396572032005,
+    "alignment": [
+      {
+        "segment": 0,
+        "lag_seconds": -0.2,
+        "lag_samples": -2,
+        "abs_correlation": 0.9755,
+        "axis": "y",
+        "accepted": true,
+        "calibration_rows": [
+          0,
+          3000
+        ],
+        "matched_rows": 24553,
+        "unmatched_rows": 68,
+        "clock_residual_p95_s": 0.006999999997788109
+      }
+    ],
+    "warnings": [
+      "Repeated GPS fixes: updates are applied only when the fix changes. Fix timestamps are unavailable; stale-fix latency remains a limitation.",
+      "68 samples have no timestamp-matched VBOX reference; excluded from supervised training and scoring.",
+      "Phone speed interpreted as m/s from paired-reference unit diagnostic; verify source metadata."
+    ],
+    "clock_offset_s": 3600.0,
+    "adapter_version": "timestamp-pairing-v2",
+    "pairing": "timestamp nearest neighbour; 150 ms tolerance",
+    "reference_matched_rows": 24553,
+    "reference_unmatched_rows": 68,
+    "speed_unit_diagnostic_median_error": {
+      "m/s": 0.8280555555555562,
+      "km/h": 8.630833333333333
+    },
+    "phone_speed_unit": "m/s",
+    "rows_valid": 24621,
+    "reference": "vbox",
+    "source_id": "b9e45dc8d856271f0a69030b7dd98f32c6b6b88b627138d67e8d3a1b7c5329fe",
+    "sample_hz": 10.0
+  },
+  "fingerprint": "b09371810b302808bbb80fa9d6d3bcc061084da1674755eeacea66852c5ba6d7"
+}

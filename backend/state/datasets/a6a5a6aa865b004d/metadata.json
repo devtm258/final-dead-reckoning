@@ -1,0 +1,20 @@
+{
+  "report": {
+    "rows_original": 556,
+    "segments": 1,
+    "reset_count": 0,
+    "median_dt": 0.10000000000000142,
+    "gps_changed_fraction": 0.01079136690647482,
+    "alignment": [],
+    "warnings": [
+      "Repeated GPS fixes: updates are applied only when the fix changes. Fix timestamps are unavailable; stale-fix latency remains a limitation.",
+      "No paired reference: assumed header unit km/h. Select explicit unit if incorrect; benchmark unavailable."
+    ],
+    "phone_speed_unit": "km/h",
+    "rows_valid": 556,
+    "reference": "none",
+    "source_id": "cdc2626adc124083a440cefb8a5ed0299e4c5e25aa4a5612316fb3dc784708c4",
+    "sample_hz": 10.0
+  },
+  "fingerprint": "a6a5a6aa865b004db9d2f0f07920aa73807578359e9844a885643b9ab57cc67c"
+}

@@ -1,0 +1,6 @@
+AI-IMU: executed supplied NUMPYIEKF on synthetic constant 5 m/s for 10s; final [50,0,0], tolerance 0.01 m passed. KITTI data/weights absent.
+Wheel-INS: CMake build succeeded; local robot paths substituted in example YAML; 915 s completed, 183000 x 10 finite trajectory output. No independent accuracy assertion.
+Python yaw demo: executed with MPLBACKEND=Agg after installing imageio; plot generated. Code performs GPS shift/scale alignment and uses fixed walking speed.
+Android: Gradle wrapper failed downloading gradle-4.6-all.zip (network unreachable); no device execution.
+MATLAB PDR: runtime unavailable and named source recordings absent; static audit only.
+Chromium: download failed with truncated archive; DOM simulation used for frontend interaction checks, not claimed as visual browser verification.
