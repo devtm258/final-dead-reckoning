@@ -1,98 +1,593 @@
-> **Results dashboard update:** Data → Test → **Results** now shows route maps, travelled distances, distance errors, endpoint errors, full position-error charts, heading/quality diagnostics and benchmark tables. See [docs/RESULTS_UPDATE.md](docs/RESULTS_UPDATE.md).
->
-> **Upgrade requires backend and frontend changes.** Stop the app, back up your project, then replace `frontend/`, `backend/idr/`, and `backend/server.py` from this package. **Keep your existing `backend/state/` unchanged.** Restart with `python start.py` and press Ctrl+F5. Run a new test to populate the new measurements. No Node build is needed.
+# IntelliDr
+## AI/ML-Based Intelligent Dead Reckoning System for GNSS-Denied Navigation
 
-# Tesseracts IDR — audited vehicle-navigation prototype
+IntelliDr is an AI/ML-powered navigation system designed to provide continuous vehicle navigation during GNSS/GPS signal outages.
 
-**This release improves measured replay performance but does not meet every-run-below-50%.**
+The system uses smartphone Inertial Measurement Unit (IMU) data, including accelerometer and gyroscope measurements, to estimate vehicle motion and speed. A temporal deep-learning model analyzes the sensor data and provides speed estimates that are subsequently used by the inertial navigation and sensor-fusion pipeline.
 
-| Recorded-data evaluation | Below 50% | Median drift | Worst drift |
-|---|---:|---:|---:|
-| Uploaded refined engine, main suite | 27/70 | 66.99% | 66,566.46% |
-| Updated vehicle estimator, same suite | **65/70** | **12.89%** | **68.98%** |
-| Updated estimator, original six early/end starts | **3/6** | 69.25% | 137.14% |
+The system is designed for challenging environments such as:
 
-The main suite attempted 72 cases on eight recordings; two were below the 5-metre travel threshold and were not counted as passes. These are development replays, including previously used training/validation data, not fresh final-test evidence. Read **reports/RESULTS.md** for full methods, per-recording results, failures, repository audit and research links.
+- Tunnels
+- Dense urban environments
+- Underground parking areas
+- GNSS-denied environments
+- Temporary GNSS signal outages
 
-## Start on Windows without Anaconda
+---
 
-1. Extract this ZIP into a **new folder**. Keep your old installation and `backend\state` backup.
-2. Open Command Prompt in the folder containing `start.py`.
-3. Use Python 3.12:
+# Problem Statement
 
-```bat
-py -3.12 -m venv .venv
-.venv\Scripts\activate
-python -m pip install --upgrade pip
-python -m pip install -r backend\requirements-lock.txt
-python start.py
+Modern navigation systems heavily depend on GNSS/GPS signals.
+
+However, GNSS signals can become unavailable or unreliable due to:
+
+- Signal blockage
+- Tunnels
+- Buildings and urban canyons
+- Underground environments
+- Atmospheric interference
+- Intentional or accidental signal disruption
+
+When GNSS becomes unavailable, conventional navigation systems can lose accurate positioning.
+
+### The Objective of IntelliDr
+
+> Estimate vehicle movement and maintain navigation using onboard smartphone sensors when GNSS is temporarily unavailable.
+
+---
+
+# How IntelliDr Works
+
+The complete system can be represented as:
+
+```text
+                 GNSS AVAILABLE
+                       |
+                       v
+                 Initial Position
+                       |
+                       v
+              +-----------------+
+              |   Smartphone    |
+              |      IMU        |
+              +--------+--------+
+                       |
+              Accelerometer
+                       +
+                  Gyroscope
+                       |
+                       v
+              +-----------------+
+              | Data Processing |
+              +--------+--------+
+                       |
+                       v
+              +-----------------+
+              |   TCN AI Model  |
+              |                 |
+              | Speed Estimation|
+              +--------+--------+
+                       |
+                 Speed + Uncertainty
+                       |
+                       v
+              +-----------------+
+              | Inertial        |
+              | Navigation /    |
+              | Sensor Fusion   |
+              +--------+--------+
+                       |
+                       v
+              Estimated Position
+                       |
+                       v
+              +-----------------+
+              |  Map Matching   |
+              +--------+--------+
+                       |
+                       v
+              Corrected Position
+                       |
+                       v
+                   Navigation
 ```
 
-Open **http://127.0.0.1:8000**. The frontend is already compiled; Node.js is not needed to run it. Keep the terminal open. Ctrl+C stops it.
+---
 
-For **neural training**, also install PyTorch before starting:
+# 1. IMU Data Collection
 
-```bat
-python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+The smartphone's Inertial Measurement Unit (IMU) provides continuous motion information.
+
+The system primarily uses:
+
+## Accelerometer
+
+Measures acceleration along three axes:
+
+```text
+Ax
+Ay
+Az
 ```
 
-Next time:
+## Gyroscope
 
-```bat
-cd /d "YOUR EXTRACTED PROJECT FOLDER"
-.venv\Scripts\activate
-python start.py
+Measures rotational movement:
+
+```text
+Gx
+Gy
+Gz
 ```
 
-If Python 3.12 is absent, install it alongside your other Python version. Do not run this tested environment with a different interpreter and assume dependency compatibility.
+Together, these provide a six-dimensional representation of the vehicle's motion:
 
-## Run an actual replay
+```text
+[Ax, Ay, Az, Gx, Gy, Gz]
+```
 
-1. The app opens the training/replay workspace directly.
-2. Select the recording in the saved-recordings list.
-3. Click the saved **Categorized tcn 35** model card to activate it for that recording. Its model ID is `e95a44ff893b4342`.
-4. Set **Navigation estimator → Calibrated vehicle + learned speed**.
-5. Enter **Blackout start** and **Duration** in seconds. Prefer at least 120 seconds of preceding sensor history for meaningful calibration. Early-start cases are still allowed and can fail.
-6. Click **RUN SELECTED BLACKOUT**.
-7. Open **Replay** for the three route traces, matching speed traces, position errors, threshold result and calibration warnings.
-8. Use **BENCHMARK 10 / 30 / 60 s** for the existing fixed-start test protocol; it deliberately includes difficult early starts. It is not the same protocol as the expanded 120-second-prefix suite.
+---
 
-VBOX is an independent scoring/reference source. It is not fed into navigation during blackout. The inertial baseline remains a comparison; “AI-aided navigation” uses the selected vehicle estimator and saved speed network. Raw network speed is an optional fourth speed trace.
+# 2. Data Processing
 
-The alternative **Planar ESKF comparison** remains available. Its smoothing/quality experiments are separate from the new vehicle estimator. Vehicle mode currently supports observation-only quality flags; requesting its unsupported smoothing/adaptation settings produces an explicit error.
+Raw IMU data contains noise caused by:
 
-## Continue training the same network
+- Road vibrations
+- Potholes
+- Phone movement
+- Sensor noise
+- Vehicle acceleration and braking
+- Irregular driving conditions
 
-1. Import the matching S/V CSV pairs (or an extracted dataset folder).
-2. Save each recording's acquisition identity. Related clips from one acquisition must share an identity.
-3. Assign Train, Val and Test using separate acquisitions. Never reuse a previously trained recording as an unseen test.
-4. For a new model choose **Create new family**, architecture, window (e.g. 35), epochs and name.
-5. For more learning choose the parent under **Continue saved model**. Its architecture and window are preserved. The current interface includes earlier training recordings automatically (`replay=true`).
-6. Click **CONTINUE TRAINING**. A new version is saved; the parent is retained.
-7. Use **Resume** for an interrupted/paused run. Completed-epoch checkpoints restore progress.
+The incoming sensor data is therefore processed and organized into time-based windows before being passed to the AI model.
 
-Uploading alone does not update weights. No neural weights were retrained for this audit: the two supplied networks were compared using identical validation-navigation cases and TCN was retained. The new sensor-transfer model learns from earlier phone fixes within each replay.
+The model analyzes a sequence of sensor observations rather than relying on a single sensor reading.
 
-## Your previous saved data
+---
 
-The included state contains the supplied saved datasets, CNN–GRU/TCN weights and registry. Do not blindly overwrite it with an old folder: preserve backups and compare your versions first. If you point `IDR_DATA_DIR` at another complete state directory, its datasets and model records are used instead.
+# 3. TCN-Based Speed Estimation
 
-The local-engine importer introduced a full-recording VBOX-derived mounting correction. The corrected reader rejects saved datasets marked `mount_yaw_deg`: re-import their original S/V files. Models trained on those contaminated inputs should be retrained in a fresh family. The shipped saved datasets lack that correction and retain raw device-frame inputs compatible with the supplied weights.
+The core AI component uses a Temporal Convolutional Network (TCN).
 
-## Reproduce evaluation and tests
+TCN is particularly suitable for this problem because IMU data is a time-series signal.
 
-```bat
-python backend\evaluate_audit.py --output reports\recheck-development.json
+Instead of asking:
+
+> "What does this single sensor reading mean?"
+
+the model asks:
+
+> "What does this sequence of sensor readings over time tell us about the vehicle's motion?"
+
+The model analyzes a short window of IMU measurements and learns patterns associated with vehicle movement.
+
+## Input
+
+```text
+Ax
+Ay
+Az
+Gx
+Gy
+Gz
+```
+
+across multiple time steps.
+
+## Output
+
+The model estimates:
+
+```text
+Vehicle Speed
++
+Prediction Uncertainty
+```
+
+The uncertainty estimate is useful because sensor measurements can become less reliable during events such as heavy vibration or potholes.
+
+---
+
+# 4. Temporal Window
+
+The model works with a sequence of sensor observations instead of isolated readings.
+
+For example:
+
+```text
+Time →
+
+t1   t2   t3   t4   t5   ...   t35
+|    |    |    |    |          |
+IMU  IMU  IMU  IMU  IMU  ...   IMU
+```
+
+This allows the model to recognize patterns such as:
+
+## Acceleration
+
+```text
+0.2 -> 0.4 -> 0.7 -> 1.0 -> 1.3
+```
+
+## Braking
+
+```text
+1.0 -> 0.7 -> 0.3 -> -0.2 -> -0.8
+```
+
+## Vibration / Noise
+
+```text
+0.2 -> 2.8 -> 0.4 -> 3.1 -> 0.1
+```
+
+The temporal model learns to distinguish these patterns and estimate the vehicle's motion.
+
+---
+
+# 5. Inertial Navigation
+
+Once the AI estimates vehicle speed, the information is passed to the navigation pipeline.
+
+The system combines:
+
+```text
+Previous Position
++
+Estimated Speed
++
+Vehicle Orientation
++
+IMU Measurements
+```
+
+to estimate the next position.
+
+Conceptually:
+
+```text
+Previous Position
+       |
+       v
+Vehicle Motion
+       |
+       v
+Distance Travelled
+       |
+       v
+New Estimated Position
+```
+
+This allows navigation to continue even when GNSS is unavailable.
+
+---
+
+# 6. GNSS + INS Fusion
+
+When GNSS is available, GNSS measurements can provide an external position reference.
+
+The system can combine GNSS information with inertial measurements:
+
+```text
+GNSS -------------+
+                  |
+                  v
+                Fusion
+                  ^
+                  |
+IMU --------------+
+```
+
+GNSS provides an absolute position reference, while IMU provides continuous motion information.
+
+When GNSS becomes unavailable, the inertial
+# 21. Local Setup and Running the Backend
+
+The IntelliDr backend can be run locally using Python and FastAPI.
+
+## Prerequisites
+
+Install the following:
+
+- Python 3.x
+- Git
+- VS Code
+- MongoDB, if the local configuration requires database connectivity
+
+---
+
+## Step 1: Open the Project
+
+Open the IntelliDr backend folder in VS Code.
+
+Then open the VS Code terminal or Windows Command Prompt.
+
+Navigate to the project directory:
+
+```bash
+cd path\to\dead-reckoning
+```
+
+For example:
+
+```bash
+cd Downloads\dead-reckoning
+```
+
+---
+
+## Step 2: Create a Virtual Environment
+
+Create a Python virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate it on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+After activation, the terminal should show something similar to:
+
+```text
+(venv) C:\Users\Username\Downloads\dead-reckoning>
+```
+
+The virtual environment keeps the project's Python packages separate from the rest of the system.
+
+---
+
+## Step 3: Install Dependencies
+
+Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs the libraries required by the backend, including the FastAPI and machine-learning dependencies specified by the project.
+
+---
+
+## Step 4: Configure Environment Variables
+
+Create or configure the `.env` file in the backend/project directory.
+
+Example:
+
+```env
+MONGO_URL=your_mongodb_connection_string
+```
+
+Other environment variables can be added depending on the project configuration.
+
+Do not upload sensitive credentials or private connection strings to GitHub.
+
+---
+
+## Step 5: Start the FastAPI Server
+
+Run the backend using Uvicorn:
+
+```bash
+uvicorn server:app --reload
+```
+
+If the server file is located differently, use the corresponding module path.
+
+For example:
+
+```bash
+uvicorn backend.server:app --reload
+```
+
+The terminal should display something similar to:
+
+```text
+INFO:     Uvicorn running on http://127.0.0.1:8000
+INFO:     Application startup complete.
+```
+
+---
+
+## Step 6: Open the Backend
+
+Once the server is running, open:
+
+```text
+http://127.0.0.1:8000
+```
+
+The FastAPI application can then be accessed locally.
+
+---
+
+## Step 7: Open FastAPI Documentation
+
+FastAPI automatically provides interactive API documentation.
+
+Open:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+This provides a Swagger interface where available API endpoints can be viewed and tested.
+
+The interface can be used to:
+
+- View available endpoints
+- Send API requests
+- Upload or provide data
+- Test model-related endpoints
+- View API responses
+
+---
+
+# Running the Complete Backend
+
+The basic CMD workflow is:
+
+```bash
+cd path\to\dead-reckoning
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+uvicorn server:app --reload
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000
+```
+
+or:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# Running the Frontend and Backend Together
+
+If the project contains a separate React frontend, the backend and frontend are run as separate processes.
+
+### Terminal 1: Backend
+
+```bash
 cd backend
-python evaluate_release.py b82c60b0547756df e95a44ff893b4342 ..\reports\recheck-original-six.json
-cd ..
-python -m pip install -r backend\requirements-test.txt
-set PYTHONPATH=backend
-python -m pytest backend\tests -q
+venv\Scripts\activate
+uvicorn server:app --reload
 ```
 
-`docs/CHANGED_FILES.md` lists additions and edits. `reports/RESULTS.md` is the authoritative report for this release; `reports/previous-release` and `docs/README_BEFORE_AUDIT.md` are historical.
+Backend:
 
-## Limits
+```text
+http://127.0.0.1:8000
+```
 
-This is recorded-data vehicle navigation, not a finished phone app. Live phone acquisition, phone latency, native deployment, full 3D/parking-floor positioning and operational map fusion remain unverified. A fresh drive is needed for an independent final evaluation. Neither <50% on every case nor the original <10% target is established.
+### Terminal 2: Frontend
+
+Open another terminal and navigate to the frontend:
+
+```bash
+cd frontend
+```
+
+Install the JavaScript dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The frontend will normally be available at:
+
+```text
+http://localhost:5173
+```
+
+The frontend communicates with the FastAPI backend through HTTP API requests.
+
+```text
+React Frontend
+      |
+      | HTTP Requests
+      v
+FastAPI Backend
+      |
+      v
+ML / Processing / Database
+```
+
+---
+
+# Running the Deployed Version
+
+The backend is also deployed online using Render.
+
+Live backend:
+
+```text
+https://final-dead-reckoning.onrender.com/
+```
+
+The deployed architecture is:
+
+```text
+User / Frontend
+       |
+       | HTTP Request
+       v
+Render
+       |
+       v
+FastAPI Backend
+       |
+       +---- Data Processing
+       |
+       +---- ML Model
+       |
+       +---- Navigation
+       |
+       +---- Database
+       |
+       v
+API Response
+```
+
+The local version is useful for development and testing, while the Render deployment provides a publicly accessible backend.
+
+---
+
+# Quick CMD Reference
+
+```bash
+# Navigate to project
+cd path\to\dead-reckoning
+
+# Create virtual environment
+python -m venv venv
+
+# Activate environment
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run FastAPI
+uvicorn server:app --reload
+```
+
+Then visit:
+
+```text
+http://127.0.0.1:8000
+```
+
+API documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Deployed backend:
+
+```text
+https://final-dead-reckoning.onrender.com/
+```
